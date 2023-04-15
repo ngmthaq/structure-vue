@@ -1,5 +1,5 @@
-import type { PlaywrightTestConfig } from '@playwright/test'
-import { devices } from '@playwright/test'
+import type { PlaywrightTestConfig } from "@playwright/test";
+import { devices } from "@playwright/test";
 
 /**
  * Read environment variables from file.
@@ -11,7 +11,7 @@ import { devices } from '@playwright/test'
  * See https://playwright.dev/docs/test-configuration.
  */
 const config: PlaywrightTestConfig = {
-  testDir: './test/e2e',
+  testDir: "./test/e2e",
   /* Maximum time one test can run for. */
   timeout: 30 * 1000,
   expect: {
@@ -28,16 +28,16 @@ const config: PlaywrightTestConfig = {
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: [['html', { outputFolder: './test/e2e-coverage', open: 'on-failure' }]],
+  reporter: [["html", { outputFolder: "./test/e2e-coverage", open: "on-failure" }]],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Maximum time each action such as `click()` can take. Defaults to 0 (no limit). */
     actionTimeout: 0,
     /* Base URL to use in actions like `await page.goto('/')`. */
-    baseURL: 'http://localhost:5173',
+    baseURL: "http://localhost:5173",
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    trace: 'on-first-retry',
+    trace: "on-first-retry",
 
     headless: true
   },
@@ -45,55 +45,55 @@ const config: PlaywrightTestConfig = {
   /* Configure projects for major browsers */
   projects: [
     {
-      name: 'chromium',
+      name: "chromium",
       use: {
-        ...devices['Desktop Chrome']
+        ...devices["Desktop Chrome"]
       }
     },
     {
-      name: 'firefox',
+      name: "firefox",
       use: {
-        ...devices['Desktop Firefox']
+        ...devices["Desktop Firefox"]
       }
     },
     {
-      name: 'webkit',
+      name: "webkit",
       use: {
-        ...devices['Desktop Safari']
+        ...devices["Desktop Safari"]
       }
     },
 
     /* Test against mobile viewports. */
     {
-      name: 'Mobile Chrome',
+      name: "Mobile Chrome",
       use: {
-        ...devices['Pixel 5']
+        ...devices["Pixel 5"]
       }
     },
     {
-      name: 'Mobile Safari',
+      name: "Mobile Safari",
       use: {
-        ...devices['iPhone 12']
+        ...devices["iPhone 12"]
       }
     },
 
     /* Test against branded browsers. */
     {
-      name: 'Microsoft Edge',
+      name: "Microsoft Edge",
       use: {
-        channel: 'msedge'
+        channel: "msedge"
       }
     },
     {
-      name: 'Google Chrome',
+      name: "Google Chrome",
       use: {
-        channel: 'chrome'
+        channel: "chrome"
       }
     }
   ],
 
   /* Folder for test artifacts such as screenshots, videos, traces, etc. */
-  outputDir: './test/e2e-test-results',
+  outputDir: "./test/e2e-test-results",
 
   /* Run your local dev server before starting the tests */
   webServer: {
@@ -102,10 +102,10 @@ const config: PlaywrightTestConfig = {
      * Use the preview server on CI for more realistic testing.
     Playwright will re-use the local server if there is already a dev-server running.
      */
-    command: process.env.CI ? 'vite preview --port 5173' : 'vite dev',
+    command: process.env.CI ? "vite preview --port 5173" : "vite dev",
     port: 5173,
     reuseExistingServer: !process.env.CI
   }
-}
+};
 
-export default config
+export default config;
