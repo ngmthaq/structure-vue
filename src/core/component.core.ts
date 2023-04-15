@@ -1,6 +1,20 @@
-import { computed, reactive, ref, watch, onBeforeMount, onBeforeUnmount, onBeforeUpdate, onMounted, onUpdated, onUnmounted } from "vue";
+import {
+  computed,
+  reactive,
+  ref,
+  watch,
+  defineProps,
+  defineEmits,
+  defineComponent,
+  onBeforeMount,
+  onBeforeUnmount,
+  onBeforeUpdate,
+  onMounted,
+  onUpdated,
+  onUnmounted
+} from "vue";
 
-export class Component {
+class Component {
   protected reactive = reactive;
   protected ref = ref;
   protected computed = computed;
@@ -42,6 +56,8 @@ export class Component {
   protected onUnmounted() {}
 }
 
-export function compose<C extends Component>(component: new () => C): C {
+function defineClassComponent<C extends Component>(component: new () => C): C {
   return new component();
 }
+
+export { Component, defineClassComponent, defineProps, defineComponent, defineEmits };

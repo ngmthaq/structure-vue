@@ -1,18 +1,12 @@
-<script setup lang="ts">
-import WelcomeItem from "./WelcomeItem.vue";
-import DocumentationIcon from "./icons/IconDocumentation.vue";
-import ToolingIcon from "./icons/IconTooling.vue";
-import EcosystemIcon from "./icons/IconEcosystem.vue";
-import CommunityIcon from "./icons/IconCommunity.vue";
-import SupportIcon from "./icons/IconSupport.vue";
-</script>
-
 <template>
   <WelcomeItem>
     <template #icon>
       <DocumentationIcon />
     </template>
-    <template #heading>Documentation</template>
+    <template #heading>
+      <span>Documentation of </span>
+      <a href="#" @click="app.onClick">{{ name }}</a>
+    </template>
 
     Vue’s
     <a href="https://vuejs.org/" target="_blank" rel="noopener">official documentation</a>
@@ -76,3 +70,23 @@ import SupportIcon from "./icons/IconSupport.vue";
     <a href="https://vuejs.org/sponsor/" target="_blank" rel="noopener">becoming a sponsor</a>.
   </WelcomeItem>
 </template>
+
+<script setup lang="ts">
+import { defineProps, defineEmits, defineClassComponent, Component } from "@/core/component.core";
+import WelcomeItem from "./WelcomeItem.vue";
+import DocumentationIcon from "./icons/IconDocumentation.vue";
+import ToolingIcon from "./icons/IconTooling.vue";
+import EcosystemIcon from "./icons/IconEcosystem.vue";
+import CommunityIcon from "./icons/IconCommunity.vue";
+import SupportIcon from "./icons/IconSupport.vue";
+
+defineProps({ name: { type: String, required: true } });
+const emit = defineEmits(["click"]);
+const app = defineClassComponent(
+  class TheWelcome extends Component {
+    public onClick() {
+      emit("click", { name: "Thang" });
+    }
+  }
+);
+</script>
