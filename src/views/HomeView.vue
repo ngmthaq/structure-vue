@@ -1,18 +1,16 @@
 <template>
   <main>
-    <TheWelcome name="Thang" @click="app.onTheWelcomeClick" />
+    <h1>HomeView</h1>
   </main>
 </template>
 
-<script setup lang="ts">
-import { Component, defineClassComponent } from "@/core/component.core";
-import TheWelcome from "../components/TheWelcome.vue";
+<script setup lang="ts"></script>
 
-const app = defineClassComponent(
-  class HomeView extends Component {
-    public onTheWelcomeClick(e: any) {
-      alert("Hi, I'm " + e.name);
-    }
-  }
-);
-</script>
+<style scoped lang="scss">
+@import "@/assets/scss/variables";
+@import "@/assets/scss/mixins";
+
+h1 {
+  color: $blue;
+}
+</style>
