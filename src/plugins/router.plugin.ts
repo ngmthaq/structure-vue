@@ -1,9 +1,9 @@
 import { createRouter, createWebHistory } from "vue-router";
-import { routes } from "@/const/path.const";
+import { PATHS } from "@/const/path.const";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
-  routes: Object.values(routes)
+  routes: Object.values(PATHS)
 });
 
 router.afterEach((to) => {

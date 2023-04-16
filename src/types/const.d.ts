@@ -1,6 +1,7 @@
 import type { RouteRecordRaw } from "vue-router";
 
 // api.const.ts
+export type ApiFetchMode = "cache" | "no-cache";
 
 // app.const.ts
 

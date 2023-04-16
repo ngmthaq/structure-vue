@@ -9,6 +9,7 @@
 <script setup lang="ts">
 import { defineClassComponent, Component } from "@/core/component.core";
 import { useCommonStore } from "@/stores/common.store";
+import { Api } from "@/plugins/api.plugin";
 
 const app = defineClassComponent(
   class AboutView extends Component {
@@ -17,6 +18,10 @@ const app = defineClassComponent(
 
     public onToggleIsLoading() {
       this.commonStore.setIsLoading(!this.commonStore.isLoading);
+    }
+
+    protected onMounted(): void {
+      new Api().get("todos");
     }
   }
 );
