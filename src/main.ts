@@ -2,14 +2,14 @@
  * Import packages area
  */
 import { createApp } from "vue";
-import { createPinia } from "pinia";
 
 /**
  * Import built-in modules | components
  */
 import App from "./App.vue";
-import router from "./router";
 import vuetify from "./plugins/vuetify.plugin";
+import pinia from "./plugins/pinia.plugin";
+import router from "./plugins/router.plugin";
 
 /**
  * Import static files | stylesheets
@@ -25,7 +25,7 @@ const app = createApp(App);
 /**
  * Apply plugins
  */
-app.use(createPinia());
+app.use(pinia);
 app.use(router);
 app.use(vuetify);
 
