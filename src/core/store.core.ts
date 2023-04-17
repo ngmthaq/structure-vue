@@ -11,7 +11,6 @@ abstract class Store extends Vue {
 
 function defineClassStore<S extends Store>(store: new () => S) {
   const instance = new store();
-  console.log(instance);
   return defineStore(instance.name, () => instance);
 }
 
