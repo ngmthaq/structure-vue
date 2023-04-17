@@ -1,26 +1,10 @@
-import {
-  computed,
-  reactive,
-  ref,
-  watch,
-  defineProps,
-  defineEmits,
-  defineComponent,
-  onBeforeMount,
-  onBeforeUnmount,
-  onBeforeUpdate,
-  onMounted,
-  onUpdated,
-  onUnmounted
-} from "vue";
+import { defineProps, defineEmits, defineComponent, onBeforeMount, onBeforeUnmount, onBeforeUpdate, onMounted, onUpdated, onUnmounted } from "vue";
+import { Vue } from "./vue.core";
 
-class Component {
-  protected reactive = reactive;
-  protected ref = ref;
-  protected computed = computed;
-  protected watch = watch;
-
+abstract class Component extends Vue {
   public constructor() {
+    super();
+
     onBeforeMount(() => {
       this.watcher();
       this.onBeforeMount();
@@ -47,13 +31,13 @@ class Component {
     });
   }
 
-  protected watcher() {}
-  protected onBeforeMount() {}
-  protected onMounted() {}
-  protected onBeforeUpdate() {}
-  protected onUpdated() {}
-  protected onBeforeUnmount() {}
-  protected onUnmounted() {}
+  public watcher = () => {};
+  public onBeforeMount = () => {};
+  public onMounted = () => {};
+  public onBeforeUpdate = () => {};
+  public onUpdated = () => {};
+  public onBeforeUnmount = () => {};
+  public onUnmounted = () => {};
 }
 
 function defineClassComponent<C extends Component>(component: new () => C): C {

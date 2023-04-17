@@ -1,19 +1,16 @@
-import { defineStore } from "pinia";
+import type { Ref } from "vue";
+import { Store, defineClassStore } from "@/core/store.core";
 
-export const useCommonStore = defineStore("common", {
-  state: (): CommonState => ({
-    isLoading: false
-  }),
+export const useCommonStore = defineClassStore(
+  class CommonStore extends Store {
+    public name: string = "common";
 
-  getters: {},
+    // State
+    public isLoading: Ref<boolean> = this.ref(false);
 
-  actions: {
-    setIsLoading(isLoading: boolean) {
-      this.isLoading = isLoading;
-    }
+    // Actions
+    public setIsloading = (bool: boolean) => {
+      this.isLoading.value = bool;
+    };
   }
-});
-
-export type CommonState = {
-  isLoading: boolean;
-};
+);

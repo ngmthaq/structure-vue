@@ -9,20 +9,15 @@
 <script setup lang="ts">
 import { defineClassComponent, Component } from "@/core/component.core";
 import { useCommonStore } from "@/stores/common.store";
-import { Api } from "@/plugins/api.plugin";
 
 const app = defineClassComponent(
   class AboutView extends Component {
     public state = this.reactive({ name: "Thang" });
     public commonStore = useCommonStore();
 
-    public onToggleIsLoading() {
-      this.commonStore.setIsLoading(!this.commonStore.isLoading);
-    }
-
-    protected onMounted(): void {
-      new Api().get("todos");
-    }
+    public onToggleIsLoading = () => {
+      this.commonStore.setIsloading(!this.commonStore.isLoading);
+    };
   }
 );
 </script>
