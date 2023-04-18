@@ -1,5 +1,6 @@
 <template>
   <div class="about">
+    <h1>{{ app.translate("hello") }}</h1>
     <h1>This is an about page of {{ app.state.name }}</h1>
     <p>Is loading: {{ app.commonStore.isLoading }}</p>
     <button @click="app.onToggleIsLoading">Click here to toggle is loading</button>

@@ -1,7 +1,12 @@
 import { defineProps, defineEmits, defineComponent, onBeforeMount, onBeforeUnmount, onBeforeUpdate, onMounted, onUpdated, onUnmounted } from "vue";
+import { useTranslation } from "i18next-vue";
 import { Vue } from "./vue.core";
 
 abstract class Component extends Vue {
+  public translate = useTranslation().t;
+
+  public i18next = useTranslation().i18next;
+
   public constructor() {
     super();
 
@@ -32,11 +37,17 @@ abstract class Component extends Vue {
   }
 
   public watcher = () => {};
+
   public onBeforeMount = () => {};
+
   public onMounted = () => {};
+
   public onBeforeUpdate = () => {};
+
   public onUpdated = () => {};
+
   public onBeforeUnmount = () => {};
+
   public onUnmounted = () => {};
 }
 

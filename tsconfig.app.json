@@ -1,6 +1,6 @@
 {
   "extends": "@vue/tsconfig/tsconfig.web.json",
-  "include": ["env.d.ts", "src/**/*", "src/**/*.vue", "test/unit/components/HelloWorld.spec.ts"],
+  "include": ["env.d.ts", "src/**/*", "src/**/*.vue", "src/**/*.json", "test/unit/components/HelloWorld.spec.ts"],
   "exclude": ["src/**/__tests__/*"],
   "compilerOptions": {
     "composite": true,
