@@ -12,6 +12,7 @@ import vuetify from "./plugins/vuetify.plugin";
 import pinia from "./plugins/pinia.plugin";
 import router from "./plugins/router.plugin";
 import i18next from "./plugins/i18n.plugin";
+import { FontAwesomeIcon } from "./plugins/fa.plugin";
 
 /**
  * Import static files | stylesheets
@@ -31,6 +32,7 @@ app.use(pinia);
 app.use(router);
 app.use(vuetify);
 app.use(i18NextVue, { i18next });
+app.component("fa-icon", FontAwesomeIcon);
 
 /**
  * Mount application

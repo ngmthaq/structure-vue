@@ -1,2 +1,7 @@
 @import "./variables";
 @import "./mixins";
+
+body {
+  overflow: hidden;
+  scroll-behavior: smooth;
+}

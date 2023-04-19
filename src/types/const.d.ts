@@ -24,5 +24,4 @@ export type Route = RouteRecordRaw;
 
 export type Routes = {
   home: Route;
-  about: Route;
 };
