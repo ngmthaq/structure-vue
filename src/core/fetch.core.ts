@@ -15,7 +15,7 @@ abstract class Fetch {
       credentials: "same-origin",
       headers: headers,
       redirect: "follow",
-      referrerPolicy: "no-referrer-when-downgrade"
+      referrerPolicy: "no-referrer-when-downgrade",
     });
   }
 
@@ -88,7 +88,7 @@ abstract class Fetch {
         ...configs,
         headers,
         method,
-        body
+        body,
       });
       if (response.status >= 200 && response.status <= 299) {
         return this.onSuccess(response);
@@ -126,5 +126,5 @@ abstract class Fetch {
 export default Fetch;
 
 export const defaultHttpRequestConfigs: HttpRequestInit = {
-  headers: new Headers()
+  headers: new Headers(),
 };

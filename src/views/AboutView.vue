@@ -19,6 +19,6 @@ const app = defineClassComponent(
     public onToggleIsLoading = () => {
       this.commonStore.setIsloading(!this.commonStore.isLoading);
     };
-  }
+  },
 );
 </script>

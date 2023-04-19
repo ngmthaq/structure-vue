@@ -9,7 +9,7 @@ i18next.init({
   fallbackLng: DEFAULT_LOCALE.lng,
   supportedLngs: Object.values(LOCALES).map((l) => l.lng),
   ns: DEFAULT_NS,
-  defaultNS: DEFAULT_NS
+  defaultNS: DEFAULT_NS,
 });
 
 function translateWithNS(key: string, ns: string = DEFAULT_NS) {

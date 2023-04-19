@@ -12,5 +12,5 @@ export const useCommonStore = defineClassStore(
     public setIsloading = (bool: boolean) => {
       this.isLoading.value = bool;
     };
-  }
+  },
 );

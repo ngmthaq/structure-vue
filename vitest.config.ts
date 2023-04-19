@@ -13,8 +13,8 @@ export default mergeConfig(
       coverage: {
         provider: "istanbul",
         reportsDirectory: "./test/unit-coverage",
-        reporter: ["html", "json", "text"]
-      }
-    }
-  })
+        reporter: ["html", "json", "text"],
+      },
+    },
+  }),
 );

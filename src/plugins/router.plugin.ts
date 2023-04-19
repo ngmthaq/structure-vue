@@ -3,7 +3,7 @@ import { PATHS } from "@/const/path.const";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
-  routes: Object.values(PATHS)
+  routes: Object.values(PATHS),
 });
 
 router.afterEach((to) => {

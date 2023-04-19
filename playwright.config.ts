@@ -19,7 +19,7 @@ const config: PlaywrightTestConfig = {
      * Maximum time expect() should wait for the condition to be met.
      * For example in `await expect(locator).toHaveText();`
      */
-    timeout: 5000
+    timeout: 5000,
   },
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   forbidOnly: !!process.env.CI,
@@ -39,7 +39,7 @@ const config: PlaywrightTestConfig = {
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: "on-first-retry",
 
-    headless: true
+    headless: true,
   },
 
   /* Configure projects for major browsers */
@@ -47,49 +47,49 @@ const config: PlaywrightTestConfig = {
     {
       name: "chromium",
       use: {
-        ...devices["Desktop Chrome"]
-      }
+        ...devices["Desktop Chrome"],
+      },
     },
     {
       name: "firefox",
       use: {
-        ...devices["Desktop Firefox"]
-      }
+        ...devices["Desktop Firefox"],
+      },
     },
     {
       name: "webkit",
       use: {
-        ...devices["Desktop Safari"]
-      }
+        ...devices["Desktop Safari"],
+      },
     },
 
     /* Test against mobile viewports. */
     {
       name: "Mobile Chrome",
       use: {
-        ...devices["Pixel 5"]
-      }
+        ...devices["Pixel 5"],
+      },
     },
     {
       name: "Mobile Safari",
       use: {
-        ...devices["iPhone 12"]
-      }
+        ...devices["iPhone 12"],
+      },
     },
 
     /* Test against branded browsers. */
     {
       name: "Microsoft Edge",
       use: {
-        channel: "msedge"
-      }
+        channel: "msedge",
+      },
     },
     {
       name: "Google Chrome",
       use: {
-        channel: "chrome"
-      }
-    }
+        channel: "chrome",
+      },
+    },
   ],
 
   /* Folder for test artifacts such as screenshots, videos, traces, etc. */
@@ -104,8 +104,8 @@ const config: PlaywrightTestConfig = {
      */
     command: process.env.CI ? "vite preview --port 5173" : "vite dev",
     port: 5173,
-    reuseExistingServer: !process.env.CI
-  }
+    reuseExistingServer: !process.env.CI,
+  },
 };
 
 export default config;

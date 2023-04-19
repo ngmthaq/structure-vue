@@ -8,15 +8,15 @@ export const PATHS: Routes = {
     name: "home",
     component: HomeViewVue,
     meta: {
-      title: "Homepage"
-    }
+      title: "Homepage",
+    },
   },
   about: {
     path: "/about",
     name: "about",
     component: AboutViewVue,
     meta: {
-      title: "About us"
-    }
-  }
+      title: "About us",
+    },
+  },
 };
