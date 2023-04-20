@@ -54,6 +54,7 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 16px 32px;
+  z-index: $z-index-header;
 
   & h3 {
     color: $light;

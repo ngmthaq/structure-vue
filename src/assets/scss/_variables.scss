@@ -1,5 +1,8 @@
 // Color
+$blue-light: #268fff;
 $blue: #007bff;
+$blue-dark: #0053ac;
+$blue-dark-2: #012f61;
 $indigo: #6610f2;
 $purple: #6f42c1;
 $pink: #e83e8c;
@@ -29,5 +32,6 @@ $breakpoint-lg: 992px;
 $breakpoint-xl: 1200px;
 
 // z-index
+$z-index-header: 1000;
 $z-index-loading: 10000;
 $z-index-notifications: 10001;
