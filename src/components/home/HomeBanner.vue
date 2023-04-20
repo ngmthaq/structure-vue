@@ -67,6 +67,7 @@ const app = defineClassComponent(
   background-position: top center;
   background-repeat: no-repeat;
   position: relative;
+  background-attachment: fixed;
 
   & .socials-container {
     position: absolute;

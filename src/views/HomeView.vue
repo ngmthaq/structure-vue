@@ -3,28 +3,30 @@
     <header>
       <h3>Nguyen Manh Thang</h3>
       <nav>
-        <div
+        <a
           :key="index"
           :class="{ active: navItem === app.state.current }"
+          :href="'#' + navItem"
           class="nav-item"
           @click="app.onClickNav(navItem)"
           v-for="(navItem, index) in app.state.nav"
         >
           <div>{{ index + 1 < 10 ? "0" + (index + 1) : index + 1 }}</div>
           <span>{{ navItem }}</span>
-        </div>
+        </a>
       </nav>
     </header>
     <HomeBanner />
+    <HomeService />
   </main>
 </template>
 
 <script setup lang="ts">
 import { Component, defineClassComponent } from "@/core/component.core";
-import { PATHS } from "@/const/path.const";
 import HomeBanner from "@/components/home/HomeBanner.vue";
+import HomeService from "@/components/home/HomeService.vue";
 
-const nav = ["home", "services", "experiences", "portfolio", "contact"];
+const nav = ["home", "services", "skills", "experiences", "contact"];
 
 const app = defineClassComponent(
   class HomeView extends Component {
@@ -35,7 +37,10 @@ const app = defineClassComponent(
 
     public onClickNav = (nav: string) => {
       this.state.current = nav;
-      this.router.push(PATHS.home.path + "#" + nav);
+    };
+
+    public onBeforeMount: () => void = () => {
+      this.router.replace("/");
     };
   },
 );
@@ -63,13 +68,14 @@ header {
   & nav {
     display: flex;
 
-    & div.nav-item {
+    & a.nav-item {
       margin-right: 24px;
       display: flex;
       flex-direction: column;
       padding: 16px;
       border-radius: 4px;
       transition: all 0.2s ease-in-out;
+      text-decoration: none;
       cursor: pointer;
 
       &.active {
