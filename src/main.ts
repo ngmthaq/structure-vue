@@ -32,7 +32,7 @@ app.use(pinia);
 app.use(router);
 app.use(vuetify);
 app.use(i18NextVue, { i18next });
-app.component("fa-icon", FontAwesomeIcon);
+app.component("font-awesome-icon", FontAwesomeIcon);
 
 /**
  * Mount application

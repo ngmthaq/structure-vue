@@ -1,7 +1,7 @@
 <template>
   <div id="home">
     <div class="socials-container">
-      <v-icon color="success" icon="mdi-plus" size="x-small"></v-icon>
+      <font-awesome-icon :icon="['fab', 'facebook']" />
     </div>
   </div>
 </template>
