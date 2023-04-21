@@ -1,5 +1,5 @@
 <template>
-  <div :id="id">
+  <div :id="id" :dir="rtl ? 'rtl' : 'ltr'">
     <slot></slot>
   </div>
 </template>

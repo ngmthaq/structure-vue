@@ -1,6 +1,6 @@
 <template>
   <main>
-    <header :class="{ colorer: app.state.current !== `home` }">
+    <header :class="{ colorer: app.state.isScrolled }">
       <h3>Nguyen Manh Thang</h3>
       <nav>
         <a
@@ -19,30 +19,60 @@
     <HomeBanner />
     <HomeService />
     <HomeSkills />
+    <HomeExperiences />
   </main>
 </template>
 
 <script setup lang="ts">
+import { CUSTOM_EVENTS } from "@/const/app.const";
 import { Component, defineClassComponent } from "@/core/component.core";
+import EventBus from "@/plugins/bus.plugin";
 import HomeBanner from "@/components/home/HomeBanner.vue";
 import HomeService from "@/components/home/HomeService.vue";
 import HomeSkills from "@/components/home/HomeSkills.vue";
+import HomeExperiences from "@/components/home/HomeExperiences.vue";
 
 const nav = ["home", "services", "skills", "experiences", "contact"];
 
 const app = defineClassComponent(
   class HomeView extends Component {
     public state = this.reactive({
+      isScrolled: false,
       nav: nav,
       current: nav[0],
     });
 
     public onClickNav = (nav: string) => {
       this.state.current = nav;
+      this.state.isScrolled = nav !== "home";
+    };
+
+    public onOver = (data: string) => {
+      this.state.current = data;
+      this.state.isScrolled = window.document.body.scrollTop > 150;
+      console.log(window.document.body.scrollTop);
+    };
+
+    public onWindowScroll = () => {
+      this.state.isScrolled = window.document.body.scrollTop > 150;
     };
 
     public onBeforeMount: () => void = () => {
       this.router.replace("/");
+    };
+
+    public onMounted: () => void = () => {
+      window.addEventListener("scroll", this.onWindowScroll, true);
+      EventBus.on<string>(CUSTOM_EVENTS.onChangeTab, (data) => {
+        this.onOver(data);
+      });
+    };
+
+    public onUnmounted: () => void = () => {
+      window.removeEventListener("scroll", this.onWindowScroll, true);
+      EventBus.off<string>(CUSTOM_EVENTS.onChangeTab, (data) => {
+        this.onOver(data);
+      });
     };
   },
 );
@@ -63,10 +93,15 @@ header {
   padding: 16px 32px;
   z-index: $z-index-header;
   background-color: transparent;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.2s linear;
 
   &.colorer {
     background-color: rgba($color: $black, $alpha: 1);
+    padding: 8px 32px;
+
+    & a {
+      padding: 8px !important;
+    }
   }
 
   & h3 {

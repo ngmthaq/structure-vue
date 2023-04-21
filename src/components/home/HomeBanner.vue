@@ -1,5 +1,5 @@
 <template>
-  <div id="home">
+  <div id="home" @mouseover="app.onOver">
     <div class="socials-container">
       <a href="https://www.facebook.com/ngmthaq" target="_blank" class="icon facebook" rel="noopener noreferrer">
         <font-awesome-icon :icon="['fab', 'facebook-f']" />
@@ -37,7 +37,9 @@
 </template>
 
 <script setup lang="ts">
+import { CUSTOM_EVENTS } from "@/const/app.const";
 import { Component, defineClassComponent } from "@/core/component.core";
+import EventBus from "@/plugins/bus.plugin";
 
 const age = new Date().getFullYear() - 2000;
 
@@ -50,6 +52,10 @@ const app = defineClassComponent(
         this.state.isShowSlash = !this.state.isShowSlash;
       }, 350);
     };
+
+    public onOver = () => {
+      EventBus.emit<string>(CUSTOM_EVENTS.onChangeTab, "home");
+    };
   },
 );
 </script>
@@ -60,7 +66,7 @@ const app = defineClassComponent(
 
 #home {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   background-color: $dark;
   background-image: linear-gradient(to left, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("@/assets/img/img-home-banner.jpg");
   background-size: cover;

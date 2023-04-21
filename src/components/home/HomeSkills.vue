@@ -1,5 +1,5 @@
 <template>
-  <div id="skills">
+  <div id="skills" @mouseover="app.onOver">
     <div class="title-cont">
       <div class="title-background">Skills</div>
       <h2 class="title">Skills</h2>
@@ -30,22 +30,8 @@
         <img src="@/assets/img/icon-sass.png" />
         <p>SASS</p>
       </div>
-      <div class="skill_slider_item">
-        <img src="@/assets/img/icon-git.png" />
-        <p>Git</p>
-      </div>
-      <div class="skill_slider_item">
-        <img src="@/assets/img/icon-vuejs.png" />
-        <p>Vue JS</p>
-      </div>
-      <div class="skill_slider_item">
-        <img src="@/assets/img/icon-nuxt.png" />
-        <p>Nuxt JS</p>
-      </div>
-      <div class="skill_slider_item">
-        <img src="@/assets/img/icon-vuetify.png" />
-        <p>Vuetify</p>
-      </div>
+    </SlickCarosel>
+    <SlickCarosel id="slick2" :slides-to-show="5" :center-mode="false" :dots="false" :autoplay="true" :arrows="false" :rtl="true">
       <div class="skill_slider_item">
         <img src="@/assets/img/icon-reactjs.png" />
         <p>React JS</p>
@@ -65,6 +51,24 @@
       <div class="skill_slider_item">
         <img src="@/assets/img/icon-typescript.png" />
         <p>Typescript</p>
+      </div>
+      <div class="skill_slider_item">
+        <img src="@/assets/img/icon-vuejs.png" />
+        <p>Vue JS</p>
+      </div>
+      <div class="skill_slider_item">
+        <img src="@/assets/img/icon-nuxt.png" />
+        <p>Nuxt JS</p>
+      </div>
+      <div class="skill_slider_item">
+        <img src="@/assets/img/icon-vuetify.png" />
+        <p>Vuetify</p>
+      </div>
+    </SlickCarosel>
+    <SlickCarosel id="slick3" :slides-to-show="5" :center-mode="false" :dots="false" :autoplay="true" :arrows="false" :rtl="false">
+      <div class="skill_slider_item">
+        <img src="@/assets/img/icon-git.png" />
+        <p>Git</p>
       </div>
       <div class="skill_slider_item">
         <img src="@/assets/img/icon-express.png" />
@@ -91,10 +95,18 @@
 </template>
 
 <script setup lang="ts">
+import EventBus from "@/plugins/bus.plugin";
 import SlickCarosel from "../common/SlickCarosel.vue";
 import { Component, defineClassComponent } from "@/core/component.core";
+import { CUSTOM_EVENTS } from "@/const/app.const";
 
-defineClassComponent(class HomeBanner extends Component {});
+const app = defineClassComponent(
+  class HomeBanner extends Component {
+    public onOver = () => {
+      EventBus.emit<string>(CUSTOM_EVENTS.onChangeTab, "skills");
+    };
+  },
+);
 </script>
 
 <style lang="scss" scoped>
@@ -103,10 +115,13 @@ defineClassComponent(class HomeBanner extends Component {});
 
 #skills {
   width: 100%;
-  padding: 64px 0;
-  background-color: $dark;
+  padding: 100px 0;
+  min-height: 100vh;
+  background-color: $black;
 
-  & #slick {
+  & #slick,
+  & #slick2,
+  & #slick3 {
     margin-top: 80px;
   }
 

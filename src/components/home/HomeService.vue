@@ -1,5 +1,5 @@
 <template>
-  <div id="services">
+  <div id="services" @mouseover="app.onOver">
     <v-container fluid class="h-100 pa-0">
       <v-row no-gutters class="h-100">
         <v-col lg="6">
@@ -24,6 +24,8 @@ import { Component, defineClassComponent } from "@/core/component.core";
 import imgECommerce from "@/assets/img/img-e-comerce.jpg";
 import imgWebApp from "@/assets/img/img-web-app.jpg";
 import imgPWA from "@/assets/img/img-progressive-web-app.jpg";
+import EventBus from "@/plugins/bus.plugin";
+import { CUSTOM_EVENTS } from "@/const/app.const";
 
 const app = defineClassComponent(
   class HomeBanner extends Component {
@@ -57,6 +59,10 @@ const app = defineClassComponent(
     public onCardHover = (img: string) => {
       app.state.img = img;
     };
+
+    public onOver = () => {
+      EventBus.emit<string>(CUSTOM_EVENTS.onChangeTab, "services");
+    };
   },
 );
 </script>
@@ -67,7 +73,7 @@ const app = defineClassComponent(
 
 #services {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   background-color: $dark;
 
   & .service-image {
@@ -77,8 +83,8 @@ const app = defineClassComponent(
   }
 
   & .card-container {
-    margin-top: 120px;
-    height: calc(100vh - 120px);
+    margin-top: 100px;
+    height: calc(100vh - 100px);
     display: flex;
     flex-direction: column;
     align-items: center;

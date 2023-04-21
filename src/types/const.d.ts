@@ -4,6 +4,9 @@ import type { RouteRecordRaw } from "vue-router";
 export type ApiFetchMode = "cache" | "no-cache";
 
 // app.const.ts
+export type CustomEvents = {
+  onChangeTab: string;
+};
 
 // format.const.ts
 

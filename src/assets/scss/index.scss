@@ -2,8 +2,12 @@
 @import "./mixins";
 
 body {
-  overflow: hidden;
+  overflow-y: scroll;
   scroll-behavior: smooth;
   width: 100vw;
   height: 100vh;
+}
+
+body::-webkit-scrollbar {
+  width: 0;
 }
