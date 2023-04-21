@@ -111,6 +111,7 @@ const app = defineClassComponent(
 
       & p {
         color: $gray-light;
+        text-align: justify;
       }
 
       & .icon {

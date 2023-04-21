@@ -145,7 +145,7 @@ const app = defineClassComponent(
       font-size: 16px;
       font-weight: 500;
       margin-bottom: 0;
-      color: #fefefe;
+      color: $light;
       opacity: 0.9;
     }
   }
