@@ -79,8 +79,51 @@ defineClassComponent(
   class SlickCarosel extends Component {
     public onMounted: () => void = () => {
       jQueryReady(($) => {
-        $("#" + props.id).slick({});
-        console.log(emit);
+        $("#" + props.id).slick(props);
+
+        $("#" + props.id).on("afterChange", (e, currentSlide) => {
+          emit("afterChange", e, currentSlide);
+        });
+
+        $("#" + props.id).on("beforeChange", (e, currentSlide, nextSlide) => {
+          emit("beforeChange", e, currentSlide, nextSlide);
+        });
+
+        $("#" + props.id).on("breakpoint", (e, slick, breakpoint) => {
+          emit("breakpoint", e, slick, breakpoint);
+        });
+
+        $("#" + props.id).on("destroy", (e, slick) => {
+          emit("destroy", e, slick);
+        });
+
+        $("#" + props.id).on("edge", (e, direction) => {
+          emit("edge", e, direction);
+        });
+
+        $("#" + props.id).on("init", (e, slick) => {
+          emit("init", e, slick);
+        });
+
+        $("#" + props.id).on("reInit", (e, slick) => {
+          emit("reInit", e, slick);
+        });
+
+        $("#" + props.id).on("setPosition", (e, slick) => {
+          emit("setPosition", e, slick);
+        });
+
+        $("#" + props.id).on("swipe", (e, slick, direction) => {
+          emit("swipe", e, slick, direction);
+        });
+
+        $("#" + props.id).on("lazyLoaded", (e, slick, image, imageSource) => {
+          emit("lazyLoaded", e, slick, image, imageSource);
+        });
+
+        $("#" + props.id).on("lazyLoadError", (e, slick, image, imageSource) => {
+          emit("lazyLoadError", e, slick, image, imageSource);
+        });
       });
     };
   },

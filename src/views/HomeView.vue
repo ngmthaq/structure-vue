@@ -1,6 +1,6 @@
 <template>
   <main>
-    <header>
+    <header :class="{ colorer: app.state.current !== `home` }">
       <h3>Nguyen Manh Thang</h3>
       <nav>
         <a
@@ -62,6 +62,12 @@ header {
   justify-content: space-between;
   padding: 16px 32px;
   z-index: $z-index-header;
+  background-color: transparent;
+  transition: all 0.2s ease-in-out;
+
+  &.colorer {
+    background-color: rgba($color: $black, $alpha: 1);
+  }
 
   & h3 {
     color: $light;

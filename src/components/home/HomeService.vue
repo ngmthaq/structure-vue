@@ -77,8 +77,8 @@ const app = defineClassComponent(
   }
 
   & .card-container {
-    margin-top: 100px;
-    height: calc(100vh - 100px);
+    margin-top: 120px;
+    height: calc(100vh - 120px);
     display: flex;
     flex-direction: column;
     align-items: center;
