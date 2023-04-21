@@ -18,6 +18,7 @@ import { FontAwesomeIcon } from "./plugins/fa.plugin";
  * Import static files | stylesheets
  */
 import "vuetify/styles";
+import "slick-carousel/slick/slick.scss";
 import "./assets/scss/index.scss";
 
 /**

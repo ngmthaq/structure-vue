@@ -1,0 +1,88 @@
+<template>
+  <div :id="id">
+    <slot></slot>
+  </div>
+</template>
+
+<script setup lang="ts">
+import { defineClassComponent, defineProps, defineEmits, Component } from "@/core/component.core";
+import { jQueryReady } from "@/plugins/jquery.plugin";
+
+const props = defineProps({
+  id: { type: String, required: true },
+  accessibility: { type: Boolean, default: true },
+  adaptiveHeight: { type: Boolean, default: false },
+  appendArrows: { type: String },
+  appendDots: { type: String },
+  arrows: { type: Boolean, default: true },
+  asNavFor: { type: String },
+  autoplay: { type: Boolean, default: false },
+  autoplaySpeed: { type: Number, default: 3000 },
+  centerMode: { type: Boolean, default: false },
+  centerPadding: { type: String, default: "50px" },
+  cssEase: { type: String, default: "ease" },
+  customPaging: { type: Function, default: () => {} },
+  dots: { type: Boolean, default: false },
+  dotsClass: { type: String, default: "slick-dots" },
+  draggable: { type: Boolean, default: true },
+  easing: { type: String, default: "linear" },
+  edgeFriction: { type: Number, default: 0.15 },
+  fade: { type: Boolean, default: false },
+  focusOnSelect: { type: Boolean, default: false },
+  focusOnChange: { type: Boolean, default: false },
+  infinite: { type: Boolean, default: true },
+  initialSlide: { type: Number, default: 0 },
+  lazyLoad: { type: String, default: "ondemand" },
+  mobileFirst: { type: Boolean, default: false },
+  nextArrow: { type: String, default: `<button type="button" class="slick-next">Next</button>` },
+  pauseOnDotsHover: { type: Boolean, default: false },
+  pauseOnFocus: { type: Boolean, default: true },
+  pauseOnHover: { type: Boolean, default: true },
+  prevArrow: { type: String, default: `<button type="button" class="slick-prev">Previous</button>` },
+  respondTo: { type: String, default: "window" },
+  responsive: { type: Array, default: () => [] },
+  rows: { type: Number, default: 1 },
+  rtl: { type: Boolean, default: false },
+  slide: { type: String, default: "" },
+  slidesPerRow: { type: Number, default: 1 },
+  slidesToScroll: { type: Number, default: 1 },
+  slidesToShow: { type: Number, default: 1 },
+  speed: { type: Number, default: 300 },
+  swipe: { type: Boolean, default: true },
+  swipeToSlide: { type: Boolean, default: false },
+  touchMove: { type: Boolean, default: true },
+  touchThreshold: { type: Number, default: 5 },
+  useCSS: { type: Boolean, default: true },
+  useTransform: { type: Boolean, default: true },
+  variableWidth: { type: Boolean, default: false },
+  vertical: { type: Boolean, default: false },
+  verticalSwiping: { type: Boolean, default: false },
+  waitForAnimate: { type: Boolean, default: true },
+  zIndex: { type: Number, default: 1000 },
+});
+
+const emit = defineEmits([
+  "afterChange",
+  "beforeChange",
+  "breakpoint",
+  "destroy",
+  "edge",
+  "init",
+  "reInit",
+  "setPosition",
+  "swipe",
+  "lazyLoaded",
+  "lazyLoadError",
+]);
+
+defineClassComponent(
+  class SlickCarosel extends Component {
+    public onMounted: () => void = () => {
+      jQueryReady(($) => {
+        $("#" + props.id).slick({});
+        console.log(emit);
+      });
+    };
+  },
+);
+</script>

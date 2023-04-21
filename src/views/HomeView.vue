@@ -18,6 +18,7 @@
     </header>
     <HomeBanner />
     <HomeService />
+    <HomeSkills />
   </main>
 </template>
 
@@ -25,6 +26,7 @@
 import { Component, defineClassComponent } from "@/core/component.core";
 import HomeBanner from "@/components/home/HomeBanner.vue";
 import HomeService from "@/components/home/HomeService.vue";
+import HomeSkills from "@/components/home/HomeSkills.vue";
 
 const nav = ["home", "services", "skills", "experiences", "contact"];
 
