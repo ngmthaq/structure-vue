@@ -17,7 +17,7 @@
       </nav>
     </header>
     <HomeBanner />
-    <HomeService />
+    <HomeServices />
     <HomeSkills />
     <HomeExperiences />
   </main>
@@ -28,7 +28,7 @@ import { CUSTOM_EVENTS } from "@/const/app.const";
 import { Component, defineClassComponent } from "@/core/component.core";
 import EventBus from "@/plugins/bus.plugin";
 import HomeBanner from "@/components/home/HomeBanner.vue";
-import HomeService from "@/components/home/HomeService.vue";
+import HomeServices from "@/components/home/HomeServices.vue";
 import HomeSkills from "@/components/home/HomeSkills.vue";
 import HomeExperiences from "@/components/home/HomeExperiences.vue";
 

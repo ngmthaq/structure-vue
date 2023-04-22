@@ -7,7 +7,7 @@ export const PATHS: Routes = {
     name: "home",
     component: HomeViewVue,
     meta: {
-      title: "Homepage",
+      title: "Nguyen Manh Thang",
     },
   },
 };

@@ -35,21 +35,21 @@ const app = defineClassComponent(
         {
           title: "E-Commerce and Landing Page",
           content:
-            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero neque aspernatur error quo voluptatem cumque perspiciatis sint, corrupti consectetur eligendi! Quibusdam quis deleniti minus quidem sunt ea itaque eos! Quaerat.",
+            "An ecommerce landing page is a standalone web page, created specifically for marketing purposes. This is the page a visitor “lands” on when they click on a link, such as an advertisement on Google or promotion in an email campaign.",
           img: imgECommerce,
           icon: "fa-solid fa-dollar-sign",
         },
         {
           title: "Blog, News and Web Application",
           content:
-            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero neque aspernatur error quo voluptatem cumque perspiciatis sint, corrupti consectetur eligendi! Quibusdam quis deleniti minus quidem sunt ea itaque eos! Quaerat.",
+            "A web application (web app) is an application program that is stored on a remote server and delivered over the internet through a browser interface.",
           img: imgWebApp,
           icon: "fa-regular fa-newspaper",
         },
         {
           title: "Progressive Web App",
           content:
-            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero neque aspernatur error quo voluptatem cumque perspiciatis sint, corrupti consectetur eligendi! Quibusdam quis deleniti minus quidem sunt ea itaque eos! Quaerat.",
+            "A progressive web app (PWA) is a website that looks and behaves as if it is a mobile app. PWAs are built to take advantage of native mobile device features, without requiring the end user to visit an app store, make a purchase and download software locally. Instead, a PWA can be located with a search engine query and accessed immediately through a browser.",
           img: imgPWA,
           icon: "fa-solid fa-mobile-screen",
         },
