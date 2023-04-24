@@ -143,7 +143,7 @@ const app = defineClassComponent(
               name: `Nguyen Manh Thang`,
               image: `https://avatars.githubusercontent.com/u/77906116?v=4`,
               url: `https://github.com/ngmthaq`,
-              title: `created a news website project by using Laravel (https://github.com/ngmthaq/project-itplus)`,
+              title: `created a news website project by using Laravel`,
               label: `fa-solid fa-certificate`,
             },
             {
@@ -227,7 +227,7 @@ const app = defineClassComponent(
               name: `Nguyen Manh Thang`,
               image: `https://avatars.githubusercontent.com/u/77906116?v=4`,
               url: `https://github.com/ngmthaq`,
-              title: `created a HRM project by the requirement of the Thuongmai University for the final project (https://github.com/ngmthaq/project-timekeeper-tmu)`,
+              title: `created a HRM project by the requirement of the Thuongmai University for the final project`,
               label: `fa-solid fa-check`,
             },
             {
