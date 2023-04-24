@@ -275,9 +275,31 @@ const app = defineClassComponent(
             application ecosystem and it compatible with desktop only. Application will be built with Reactjs,
             Redux, Saga, Material-UI and Axios. Project's team member is 1 member. Project features: login, logout,
             setup user infomation for user who login into this application for the first time, change user password,
-            change user information, invite people into Trios ecosystem and upgrage server pricing. Some picture of the application:`,
+            change user information, invite people into Trios ecosystem and upgrage server pricing. Some pictures of the application:`,
             time: `2022`,
             descriptionImage: ["/trios-web-admin-0.png", "/trios-web-admin-1.png", "/trios-web-admin-2.png", "/trios-web-admin-3.png"],
+          },
+          actions: [
+            {
+              name: `Nguyen Manh Thang`,
+              image: `https://avatars.githubusercontent.com/u/77906116?v=4`,
+              url: `https://github.com/ngmthaq`,
+              title: `started building this project`,
+              label: `fa-solid fa-check`,
+            },
+          ],
+        },
+        {
+          company: {
+            name: `bGlobal JSC - Company Website`,
+            image: LogoBGlobal,
+            url: `https://bglobalcorp.com/`,
+            description: `The website has features such as posting job vacancies, sharing knowledge, sharing history and developing direction of the company.
+            Compatible with all types of desktop, tablet and phone screens. Application will be built with Reactjs, Nextjs,
+            Redux, Saga, Material-UI and Axios. Project's team member is 2 members. Project features: homepage, about us, blogs, products, career, 
+            services and contact. Some pictures of the application:`,
+            time: `2022`,
+            descriptionImage: ["/bglobal-website-0.png", "/bglobal-website-1.png", "/bglobal-website-2.png", "/bglobal-website-3.png"],
           },
           actions: [
             {

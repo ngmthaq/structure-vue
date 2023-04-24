@@ -18,6 +18,7 @@
                 :key="descriptionImageIndex"
                 :src="descriptionImage"
                 :alt="item.company.description"
+                @click="app.onClickProductImage"
               />
             </div>
           </div>
@@ -43,7 +44,7 @@
 </template>
 
 <script setup lang="ts">
-import { defineProps } from "@/core/component.core";
+import { Component, defineClassComponent, defineProps } from "@/core/component.core";
 
 type Props = {
   data: Array<{
@@ -66,6 +67,17 @@ type Props = {
 };
 
 defineProps<Props>();
+
+const app = defineClassComponent(
+  class HomeTimelines extends Component {
+    public onClickProductImage(e: Event) {
+      const el = e.target;
+      if (el && "src" in el) {
+        window.open(el.src as string, "_blank");
+      }
+    }
+  },
+);
 </script>
 
 <style lang="scss" scoped>
@@ -141,7 +153,12 @@ defineProps<Props>();
             margin-top: 16px;
 
             & img {
-              width: 50%;
+              width: 49%;
+              height: auto;
+              margin-right: 1%;
+              margin-bottom: 1%;
+              object-fit: cover;
+              cursor: pointer;
             }
           }
         }
