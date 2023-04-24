@@ -74,7 +74,7 @@ const app = defineClassComponent(
 #services {
   width: 100%;
   min-height: 100vh;
-  background-color: $dark;
+  background-color: #0d1117;
 
   & .service-image {
     width: 100%;

@@ -1,6 +1,6 @@
 <template>
   <div class="timeline-container">
-    <div class="timeline" v-for="(item, index) in data" :key="index">
+    <div class="timeline" :style="{ marginTop: index === 0 ? `0px` : `24px` }" v-for="(item, index) in data" :key="index">
       <div class="company-image-container">
         <img :src="item.company.image" :alt="item.company.name" />
       </div>
@@ -62,6 +62,9 @@ defineProps<Props>();
 @import "@/assets/scss/mixins";
 
 .timeline-container {
+  max-width: 1200px;
+  margin: 0 auto;
+
   & .timeline {
     display: flex;
     align-items: flex-start;
@@ -146,7 +149,7 @@ defineProps<Props>();
               width: 36px;
               height: 36px;
               border-radius: 50%;
-              background-color: rgba($color: #0e0e0e, $alpha: 0.3);
+              background-color: rgba($color: #21262d, $alpha: 1);
               margin-left: 2px;
               display: flex;
               align-items: center;
