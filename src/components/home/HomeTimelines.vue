@@ -70,10 +70,11 @@ defineProps<Props>();
 
 const app = defineClassComponent(
   class HomeTimelines extends Component {
-    public onClickProductImage(e: Event) {
+    public onClickProductImage(e: any) {
       const el = e.target;
       if (el && "src" in el) {
-        window.open(el.src as string, "_blank");
+        const src: any = el.src as any;
+        window.open(src, "_blank");
       }
     }
   },
