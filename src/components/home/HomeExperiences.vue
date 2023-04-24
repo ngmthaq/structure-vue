@@ -48,13 +48,13 @@ const app = defineClassComponent(
             name: `Thuongmai University - Faculty of Economic Information Systems and E-commerce`,
             image: LogoTMU,
             url: `https://httttmdt.tmu.edu.vn/`,
-            description: `Faculty of Economic Information Systems and E-commerce is the leading 
-            Faculty of E-commerce and Management Information Systems in the Universities of Economics 
-            and Management. Specializing in training experts in E-Commerce and Information 
-            Systems for the country at university level. The Faculty is also an in-depth research 
-            unit, providing macro policy advice on E-commerce and Information systems for state management 
-            agencies, local e-commerce development centers and technology transfer and consulting and 
-            corporate governance. Students will learn about specialized subjects on information systems, 
+            description: `Faculty of Economic Information Systems and E-commerce is the leading
+            Faculty of E-commerce and Management Information Systems in the Universities of Economics
+            and Management. Specializing in training experts in E-Commerce and Information
+            Systems for the country at university level. The Faculty is also an in-depth research
+            unit, providing macro policy advice on E-commerce and Information systems for state management
+            agencies, local e-commerce development centers and technology transfer and consulting and
+            corporate governance. Students will learn about specialized subjects on information systems,
             analysis and design of information systems, software development process, website programming, database, ...`,
             time: `2008`,
           },
@@ -101,12 +101,12 @@ const app = defineClassComponent(
             name: `ITPlus Institute of Information Technology`,
             image: LogoITPlus,
             url: `http://itplus-academy.edu.vn/`,
-            description: `ITPlus Institute of Information Technology is a leading information technology research and 
-            skills training unit in Vietnam with specialties such as: "Application Programming" and "Graphic Design - 
-            Multimedia Communication" . Currently, ITPlus Institute of Information Technology is cooperating with more than 
-            60 leading enterprises in the field of information technology and graphic design such as: Samsung, LG, FPT Software, 
-            Viettel, VNPT, CMC, VCCorp, Netnam, Tinhvan, VNG, Gameloft, Esoftflow, Telsoft, Izisolution, Ecommage, Vnext, EcoIT…. 
-            In order to provide high-quality information technology human resources, improve and enhance training programs in line 
+            description: `ITPlus Institute of Information Technology is a leading information technology research and
+            skills training unit in Vietnam with specialties such as: "Application Programming" and "Graphic Design -
+            Multimedia Communication" . Currently, ITPlus Institute of Information Technology is cooperating with more than
+            60 leading enterprises in the field of information technology and graphic design such as: Samsung, LG, FPT Software,
+            Viettel, VNPT, CMC, VCCorp, Netnam, Tinhvan, VNG, Gameloft, Esoftflow, Telsoft, Izisolution, Ecommage, Vnext, EcoIT….
+            In order to provide high-quality information technology human resources, improve and enhance training programs in line
             with market demand.`,
             time: `2014`,
           },
@@ -160,8 +160,8 @@ const app = defineClassComponent(
             name: `VietIS Software Corporation`,
             image: LogoVietIS,
             url: `https://vietis.com.vn/`,
-            description: `By providing a new creative platform, VIETIS enhances people's creativity and productivity, 
-            and supports developers and companies responsible for next-generation technologies. By incorporating the 
+            description: `By providing a new creative platform, VIETIS enhances people's creativity and productivity,
+            and supports developers and companies responsible for next-generation technologies. By incorporating the
             latest technology and innovative business, we create new value and aim to be a globally reliable partner.`,
             time: `2009`,
           },
@@ -204,7 +204,7 @@ const app = defineClassComponent(
             description: `"Sun" means the Sun with a great source of energy.
             We aim to be a powerful source of illumination and energy to ensure the growth of our current and future business sector
             that has been and will be done here. Sun* is also the Sun that shines, spreads positive energy and brings good things to
-            the community and society. The asterisk means multiplication in the programming language, implying that the values Sun* 
+            the community and society. The asterisk means multiplication in the programming language, implying that the values Sun*
             brings to society will multiple continuously.`,
             time: `March 1, 2013`,
           },
@@ -244,8 +244,8 @@ const app = defineClassComponent(
             name: `bGlobal JSC`,
             image: LogoBGlobal,
             url: `https://bglobalcorp.com/`,
-            description: `Our mission is to create innovative information technology products to serve the community. 
-            For our partners, we reveal the hidden value of their business by providing innovative advice and solutions. 
+            description: `Our mission is to create innovative information technology products to serve the community.
+            For our partners, we reveal the hidden value of their business by providing innovative advice and solutions.
             Thereby, we help partners to compete and succeed in this fluctuating technology world.`,
             time: `2019`,
           },
@@ -262,6 +262,29 @@ const app = defineClassComponent(
               image: `https://avatars.githubusercontent.com/u/77906116?v=4`,
               url: `https://github.com/ngmthaq`,
               title: `started learning more about Reactjs`,
+              label: `fa-solid fa-check`,
+            },
+          ],
+        },
+        {
+          company: {
+            name: `bGlobal JSC - Trios Web Admin`,
+            image: LogoBGlobal,
+            url: `https://bglobalcorp.com/`,
+            description: `This website is used to manage the administrator features of the server in the Trios
+            application ecosystem and it compatible with desktop only. Application will be built with Reactjs,
+            Redux, Saga, Material-UI and Axios. Project's team member is 1 member. Project features: login, logout,
+            setup user infomation for user who login into this application for the first time, change user password,
+            change user information, invite people into Trios ecosystem and upgrage server pricing. Some picture of the application:`,
+            time: `2022`,
+            descriptionImage: ["/trios-web-admin-0.png", "/trios-web-admin-1.png", "/trios-web-admin-2.png", "/trios-web-admin-3.png"],
+          },
+          actions: [
+            {
+              name: `Nguyen Manh Thang`,
+              image: `https://avatars.githubusercontent.com/u/77906116?v=4`,
+              url: `https://github.com/ngmthaq`,
+              title: `started building this project`,
               label: `fa-solid fa-check`,
             },
           ],

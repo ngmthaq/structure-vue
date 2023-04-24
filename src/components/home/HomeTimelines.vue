@@ -10,7 +10,17 @@
             <a target="_blank" :href="item.company.url">{{ item.company.name }}</a>
             <p>commented in/on/at {{ item.company.time }}</p>
           </div>
-          <div class="body">{{ item.company.description }}</div>
+          <div class="body">
+            <p>{{ item.company.description }}</p>
+            <div class="image-container" v-if="Boolean(item.company.descriptionImage)">
+              <img
+                v-for="(descriptionImage, descriptionImageIndex) in item.company.descriptionImage"
+                :key="descriptionImageIndex"
+                :src="descriptionImage"
+                :alt="item.company.description"
+              />
+            </div>
+          </div>
         </div>
         <div class="action-container">
           <div class="action-item" v-for="(actionItem, actionIndex) in item.actions" :key="actionIndex">
@@ -41,8 +51,9 @@ type Props = {
       name: string;
       image: string;
       url: string;
-      description: string;
       time: string;
+      description: string;
+      descriptionImage?: string[];
     };
     actions: Array<{
       name: string;
@@ -123,6 +134,16 @@ defineProps<Props>();
           border-top: unset;
           padding: 8px 16px;
           border-radius: 0 0 8px 8px;
+
+          & .image-container {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 16px;
+
+            & img {
+              width: 50%;
+            }
+          }
         }
       }
 
