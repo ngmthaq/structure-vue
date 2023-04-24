@@ -32,6 +32,7 @@ import HomeServices from "@/components/home/HomeServices.vue";
 import HomeSkills from "@/components/home/HomeSkills.vue";
 import HomeExperiences from "@/components/home/HomeExperiences.vue";
 
+const top = 150;
 const nav = ["home", "services", "skills", "experiences", "contact"];
 
 const app = defineClassComponent(
@@ -49,12 +50,11 @@ const app = defineClassComponent(
 
     public onOver = (data: string) => {
       this.state.current = data;
-      this.state.isScrolled = window.document.body.scrollTop > 150;
-      console.log(window.document.body.scrollTop);
+      this.state.isScrolled = window.document.body.scrollTop > top;
     };
 
     public onWindowScroll = () => {
-      this.state.isScrolled = window.document.body.scrollTop > 150;
+      this.state.isScrolled = window.document.body.scrollTop > top;
     };
 
     public onBeforeMount: () => void = () => {

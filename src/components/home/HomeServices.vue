@@ -1,5 +1,5 @@
 <template>
-  <div id="services" @mouseover="app.onOver">
+  <div id="services" @mousemove="app.onOver">
     <v-container fluid class="h-100 pa-0">
       <v-row no-gutters class="h-100">
         <v-col lg="6">
@@ -7,7 +7,7 @@
         </v-col>
         <v-col lg="6">
           <div class="card-container">
-            <div v-for="(card, index) in app.state.cards" class="card" :key="index" @click="app.onCardHover(card.img)" @mouseover="app.onCardHover(card.img)">
+            <div v-for="(card, index) in app.state.cards" class="card" :key="index" @click="app.onCardHover(card.img)" @mousemove="app.onCardHover(card.img)">
               <h1>{{ card.title }}</h1>
               <p>{{ card.content }}</p>
               <font-awesome-icon :icon="card.icon" class="icon" />

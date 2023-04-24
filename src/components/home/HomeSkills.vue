@@ -1,11 +1,21 @@
 <template>
-  <div id="skills" @mouseover="app.onOver">
+  <div id="skills" @mousemove="app.onOver">
     <div class="title-cont">
       <div class="title-background">Skills</div>
       <h2 class="title">Skills</h2>
     </div>
     <p class="text-center text-white">This is my technical skills, please check it out!</p>
-    <SlickCarosel id="slick" :slides-to-show="5" :center-mode="false" :dots="false" :autoplay="true" :arrows="false">
+    <SlickCarosel
+      id="slick"
+      :slides-to-show="5"
+      :center-mode="false"
+      :dots="false"
+      :autoplay="true"
+      :arrows="false"
+      :rtl="false"
+      :pause-on-hover="false"
+      :draggable="false"
+    >
       <div class="skill_slider_item">
         <img src="@/assets/img/icon-html.png" />
         <p>HTML</p>
@@ -31,7 +41,17 @@
         <p>SASS</p>
       </div>
     </SlickCarosel>
-    <SlickCarosel id="slick2" :slides-to-show="5" :center-mode="false" :dots="false" :autoplay="true" :arrows="false" :rtl="true">
+    <SlickCarosel
+      id="slick2"
+      :slides-to-show="5"
+      :center-mode="false"
+      :dots="false"
+      :autoplay="true"
+      :arrows="false"
+      :rtl="true"
+      :pause-on-hover="false"
+      :draggable="false"
+    >
       <div class="skill_slider_item">
         <img src="@/assets/img/icon-reactjs.png" />
         <p>React JS</p>
@@ -65,7 +85,17 @@
         <p>Vuetify</p>
       </div>
     </SlickCarosel>
-    <SlickCarosel id="slick3" :slides-to-show="5" :center-mode="false" :dots="false" :autoplay="true" :arrows="false" :rtl="false">
+    <SlickCarosel
+      id="slick3"
+      :slides-to-show="5"
+      :center-mode="false"
+      :dots="false"
+      :autoplay="true"
+      :arrows="false"
+      :rtl="false"
+      :pause-on-hover="false"
+      :draggable="false"
+    >
       <div class="skill_slider_item">
         <img src="@/assets/img/icon-git.png" />
         <p>Git</p>

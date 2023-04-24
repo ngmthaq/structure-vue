@@ -1,5 +1,5 @@
 <template>
-  <div id="home" @mouseover="app.onOver">
+  <div id="home" @mousemove="app.onOver">
     <div class="socials-container">
       <a href="https://www.facebook.com/ngmthaq" target="_blank" class="icon facebook" rel="noopener noreferrer">
         <font-awesome-icon :icon="['fab', 'facebook-f']" />
