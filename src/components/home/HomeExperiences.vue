@@ -20,22 +20,7 @@
         </v-row>
         <v-row class="mt-5">
           <v-col cols="12">
-            <HomeTimelines
-              :data="[
-                {
-                  company: { name: `Thuong Mai University`, image: `/favicon.ico`, url: `#`, description: `Hihi hehe haha`, time: `24/04.2023` },
-                  actions: [
-                    {
-                      name: `Nguyen Manh Thang`,
-                      image: `/favicon.ico`,
-                      url: `#`,
-                      title: `Hihi hehe hahahaha`,
-                      label: `fa-solid fa-user`,
-                    },
-                  ],
-                },
-              ]"
-            />
+            <HomeTimelines :data="app.state.timelines" />
           </v-col>
         </v-row>
       </v-container>
@@ -51,7 +36,62 @@ import HomeTimelines from "./HomeTimelines.vue";
 
 const app = defineClassComponent(
   class HomeBanner extends Component {
-    public state = this.reactive({});
+    public state = this.reactive({
+      timelines: [
+        {
+          company: {
+            name: `Thuongmai University - Faculty of Economic Information Systems and E-commerce`,
+            image: `https://tmu.edu.vn/template_dhtm/images/logo-sm.png`,
+            url: `https://httttmdt.tmu.edu.vn/`,
+            description: `Faculty of Economic Information Systems and E-commerce is the leading 
+            Faculty of E-commerce and Management Information Systems in the Universities of Economics 
+            and Management. Specializing in training experts in E-Commerce and Information 
+            Systems for the country at university level. The Faculty is also an in-depth research 
+            unit, providing macro policy advice on E-commerce and Information systems for state management 
+            agencies, local e-commerce development centers and technology transfer and consulting and 
+            corporate governance.`,
+            time: `2008`,
+          },
+          actions: [
+            {
+              name: `Nguyen Manh Thang`,
+              image: `https://avatars.githubusercontent.com/u/77906116?v=4`,
+              url: `https://github.com/ngmthaq`,
+              title: `entering Thuongmai University, faculty of Economic Information Systems in 2018`,
+              label: `fa-solid fa-hat-wizard`,
+            },
+            {
+              name: `Nguyen Manh Thang`,
+              image: `https://avatars.githubusercontent.com/u/77906116?v=4`,
+              url: `https://github.com/ngmthaq`,
+              title: `get certificate of basic informatics issued by Thuongmai University in 2018`,
+              label: `fa-solid fa-certificate`,
+            },
+            {
+              name: `Nguyen Manh Thang`,
+              image: `https://avatars.githubusercontent.com/u/77906116?v=4`,
+              url: `https://github.com/ngmthaq`,
+              title: `get TOEIC (745) certificate issued by IIG in 2020`,
+              label: `fa-solid fa-certificate`,
+            },
+            {
+              name: `Nguyen Manh Thang`,
+              image: `https://avatars.githubusercontent.com/u/77906116?v=4`,
+              url: `https://github.com/ngmthaq`,
+              title: `in the top of 60 best students in the course (2018 - 2022)`,
+              label: `fa-solid fa-certificate`,
+            },
+            {
+              name: `Nguyen Manh Thang`,
+              image: `https://avatars.githubusercontent.com/u/77906116?v=4`,
+              url: `https://github.com/ngmthaq`,
+              title: `graduated with a good bachelor's degree in 2022, GPA: 3.58/4.0`,
+              label: `fa-solid fa-graduation-cap`,
+            },
+          ],
+        },
+      ],
+    });
 
     public onOver = () => {
       EventBus.emit<string>(CUSTOM_EVENTS.onChangeTab, "experiences");

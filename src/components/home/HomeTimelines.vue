@@ -8,7 +8,7 @@
         <div class="company-description-container">
           <div class="header">
             <a target="_blank" :href="item.company.url">{{ item.company.name }}</a>
-            <p>commented at {{ item.company.time }}</p>
+            <p>commented in/on/at {{ item.company.time }}</p>
           </div>
           <div class="body">{{ item.company.description }}</div>
         </div>
