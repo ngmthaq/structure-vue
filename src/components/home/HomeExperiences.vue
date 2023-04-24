@@ -37,6 +37,7 @@ import LogoTMU from "@/assets/img/logo-tmu.jpg";
 import LogoITPlus from "@/assets/img/logo-itplus.jpg";
 import LogoVietIS from "@/assets/img/logo-vietis.jpg";
 import LogoSunAsterisk from "@/assets/img/logo-sun-asterisk.jpg";
+import LogoBGlobal from "@/assets/img/logo-bglobal.svg";
 
 const app = defineClassComponent(
   class HomeBanner extends Component {
@@ -226,7 +227,7 @@ const app = defineClassComponent(
               name: `Nguyen Manh Thang`,
               image: `https://avatars.githubusercontent.com/u/77906116?v=4`,
               url: `https://github.com/ngmthaq`,
-              title: `created a HRM project by the requirement of the Thuongmai University to make a product for the final project in the university`,
+              title: `created a HRM project by the requirement of the Thuongmai University for the final project (https://github.com/ngmthaq/project-timekeeper-tmu)`,
               label: `fa-solid fa-check`,
             },
             {
@@ -235,6 +236,33 @@ const app = defineClassComponent(
               url: `https://github.com/ngmthaq`,
               title: `stop the internship contract in 04/2022`,
               label: `fa-solid fa-xmark`,
+            },
+          ],
+        },
+        {
+          company: {
+            name: `bGlobal JSC`,
+            image: LogoBGlobal,
+            url: `https://bglobalcorp.com/`,
+            description: `Our mission is to create innovative information technology products to serve the community. 
+            For our partners, we reveal the hidden value of their business by providing innovative advice and solutions. 
+            Thereby, we help partners to compete and succeed in this fluctuating technology world.`,
+            time: `2019`,
+          },
+          actions: [
+            {
+              name: `Nguyen Manh Thang`,
+              image: `https://avatars.githubusercontent.com/u/77906116?v=4`,
+              url: `https://github.com/ngmthaq`,
+              title: `started joining bGlobal as a fresher frontend developer in 04/2022`,
+              label: `fa-solid fa-check`,
+            },
+            {
+              name: `Nguyen Manh Thang`,
+              image: `https://avatars.githubusercontent.com/u/77906116?v=4`,
+              url: `https://github.com/ngmthaq`,
+              title: `started learning more about Reactjs`,
+              label: `fa-solid fa-check`,
             },
           ],
         },
