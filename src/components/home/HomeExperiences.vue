@@ -35,6 +35,8 @@ import EventBus from "@/plugins/bus.plugin";
 import HomeTimelines from "./HomeTimelines.vue";
 import LogoTMU from "@/assets/img/logo-tmu.jpg";
 import LogoITPlus from "@/assets/img/logo-itplus.jpg";
+import LogoVietIS from "@/assets/img/logo-vietis.jpg";
+import LogoSunAsterisk from "@/assets/img/logo-sun-asterisk.jpg";
 
 const app = defineClassComponent(
   class HomeBanner extends Component {
@@ -60,28 +62,28 @@ const app = defineClassComponent(
               name: `Nguyen Manh Thang`,
               image: `https://avatars.githubusercontent.com/u/77906116?v=4`,
               url: `https://github.com/ngmthaq`,
-              title: `entering Thuongmai University, faculty of Economic Information Systems in 2018`,
+              title: `entered Thuongmai University, faculty of Economic Information Systems in 2018`,
               label: `fa-solid fa-hat-wizard`,
             },
             {
               name: `Nguyen Manh Thang`,
               image: `https://avatars.githubusercontent.com/u/77906116?v=4`,
               url: `https://github.com/ngmthaq`,
-              title: `get certificate of basic informatics issued by Thuongmai University in 2018`,
+              title: `got certificate of basic informatics issued by Thuongmai University in 2018`,
               label: `fa-solid fa-certificate`,
             },
             {
               name: `Nguyen Manh Thang`,
               image: `https://avatars.githubusercontent.com/u/77906116?v=4`,
               url: `https://github.com/ngmthaq`,
-              title: `get TOEIC (745) certificate issued by IIG in 2020`,
+              title: `got TOEIC (745) certificate issued by IIG in 2020`,
               label: `fa-solid fa-certificate`,
             },
             {
               name: `Nguyen Manh Thang`,
               image: `https://avatars.githubusercontent.com/u/77906116?v=4`,
               url: `https://github.com/ngmthaq`,
-              title: `in the top of 60 best students in the course (2018 - 2022)`,
+              title: `in the top of 60 best graduated students (2018 - 2022)`,
               label: `fa-solid fa-certificate`,
             },
             {
@@ -97,7 +99,7 @@ const app = defineClassComponent(
           company: {
             name: `ITPlus Institute of Information Technology`,
             image: LogoITPlus,
-            url: `https://httttmdt.tmu.edu.vn/`,
+            url: `http://itplus-academy.edu.vn/`,
             description: `ITPlus Institute of Information Technology is a leading information technology research and 
             skills training unit in Vietnam with specialties such as: "Application Programming" and "Graphic Design - 
             Multimedia Communication" . Currently, ITPlus Institute of Information Technology is cooperating with more than 
@@ -112,14 +114,14 @@ const app = defineClassComponent(
               name: `Nguyen Manh Thang`,
               image: `https://avatars.githubusercontent.com/u/77906116?v=4`,
               url: `https://github.com/ngmthaq`,
-              title: `entering ITPlus Academy "Professional web design and programming course with PHP" in 04/2020`,
+              title: `entered ITPlus Academy "Professional web design and programming course with PHP" in 04/2020`,
               label: `fa-solid fa-hat-wizard`,
             },
             {
               name: `Nguyen Manh Thang`,
               image: `https://avatars.githubusercontent.com/u/77906116?v=4`,
               url: `https://github.com/ngmthaq`,
-              title: `start learning about HTML, CSS, Javascript and jQuery`,
+              title: `started learning about HTML, CSS, Javascript and jQuery`,
               label: `fa-solid fa-plus`,
             },
             {
@@ -133,7 +135,7 @@ const app = defineClassComponent(
               name: `Nguyen Manh Thang`,
               image: `https://avatars.githubusercontent.com/u/77906116?v=4`,
               url: `https://github.com/ngmthaq`,
-              title: `start learning about PHP, OOP, MySQL and Laravel`,
+              title: `started learning about PHP, OOP, MySQL and Laravel`,
               label: `fa-solid fa-plus`,
             },
             {
@@ -149,6 +151,90 @@ const app = defineClassComponent(
               url: `https://github.com/ngmthaq`,
               title: `graduated with a distinction's degree in 10/2020`,
               label: `fa-solid fa-graduation-cap`,
+            },
+          ],
+        },
+        {
+          company: {
+            name: `VietIS Software Corporation`,
+            image: LogoVietIS,
+            url: `https://vietis.com.vn/`,
+            description: `By providing a new creative platform, VIETIS enhances people's creativity and productivity, 
+            and supports developers and companies responsible for next-generation technologies. By incorporating the 
+            latest technology and innovative business, we create new value and aim to be a globally reliable partner.`,
+            time: `2009`,
+          },
+          actions: [
+            {
+              name: `Nguyen Manh Thang`,
+              image: `https://avatars.githubusercontent.com/u/77906116?v=4`,
+              url: `https://github.com/ngmthaq`,
+              title: `started joining VietIS as a intern in 10/2021`,
+              label: `fa-solid fa-check`,
+            },
+            {
+              name: `Nguyen Manh Thang`,
+              image: `https://avatars.githubusercontent.com/u/77906116?v=4`,
+              url: `https://github.com/ngmthaq`,
+              title: `started learning more about Vuejs, Laravel`,
+              label: `fa-solid fa-check`,
+            },
+            {
+              name: `Nguyen Manh Thang`,
+              image: `https://avatars.githubusercontent.com/u/77906116?v=4`,
+              url: `https://github.com/ngmthaq`,
+              title: `join the "Lecre Album App" project to learn more about the real project`,
+              label: `fa-solid fa-check`,
+            },
+            {
+              name: `Nguyen Manh Thang`,
+              image: `https://avatars.githubusercontent.com/u/77906116?v=4`,
+              url: `https://github.com/ngmthaq`,
+              title: `stop the internship contract to go back to school in 01/2022`,
+              label: `fa-solid fa-xmark`,
+            },
+          ],
+        },
+        {
+          company: {
+            name: `Sun Asterisk`,
+            image: LogoSunAsterisk,
+            url: `https://sun-asterisk.vn/en/`,
+            description: `"Sun" means the Sun with a great source of energy.
+            We aim to be a powerful source of illumination and energy to ensure the growth of our current and future business sector
+            that has been and will be done here. Sun* is also the Sun that shines, spreads positive energy and brings good things to
+            the community and society. The asterisk means multiplication in the programming language, implying that the values Sun* 
+            brings to society will multiple continuously.`,
+            time: `March 1, 2013`,
+          },
+          actions: [
+            {
+              name: `Nguyen Manh Thang`,
+              image: `https://avatars.githubusercontent.com/u/77906116?v=4`,
+              url: `https://github.com/ngmthaq`,
+              title: `started joining Sun* as a intern in 01/2022`,
+              label: `fa-solid fa-check`,
+            },
+            {
+              name: `Nguyen Manh Thang`,
+              image: `https://avatars.githubusercontent.com/u/77906116?v=4`,
+              url: `https://github.com/ngmthaq`,
+              title: `started learning more about Laravel advanced`,
+              label: `fa-solid fa-check`,
+            },
+            {
+              name: `Nguyen Manh Thang`,
+              image: `https://avatars.githubusercontent.com/u/77906116?v=4`,
+              url: `https://github.com/ngmthaq`,
+              title: `created a HRM project by the requirement of the Thuongmai University to make a product for the final project in the university`,
+              label: `fa-solid fa-check`,
+            },
+            {
+              name: `Nguyen Manh Thang`,
+              image: `https://avatars.githubusercontent.com/u/77906116?v=4`,
+              url: `https://github.com/ngmthaq`,
+              title: `stop the internship contract in 04/2022`,
+              label: `fa-solid fa-xmark`,
             },
           ],
         },
