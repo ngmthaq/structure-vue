@@ -261,7 +261,7 @@ const app = defineClassComponent(
               name: `Nguyen Manh Thang`,
               image: `https://avatars.githubusercontent.com/u/77906116?v=4`,
               url: `https://github.com/ngmthaq`,
-              title: `started learning more about Reactjs`,
+              title: `started learning more about Reactjs, Nextjs, Electron, Typescript,...`,
               label: `fa-solid fa-check`,
             },
           ],
@@ -307,6 +307,36 @@ const app = defineClassComponent(
               image: `https://avatars.githubusercontent.com/u/77906116?v=4`,
               url: `https://github.com/ngmthaq`,
               title: `started building this project`,
+              label: `fa-solid fa-check`,
+            },
+          ],
+        },
+        {
+          company: {
+            name: `bGlobal JSC - Trios Desktop App`,
+            image: LogoBGlobal,
+            url: `https://bglobalcorp.com/`,
+            description: `This is a messaging application that can message individuals through the phone number they have registered. 
+            Apps can create groups to message each other. In the later phases, the application has integrated calling for 
+            individuals as well as calling in groups. In addition, the application also supports setting up online meetings and screen sharing. 
+            This is an application located in the Trios ecosystem including: Trios Web Admin, Trios Android, Trios IOS and Trios Desktop. 
+            Project using Reactjs, Electron, SQLite, Redux, Saga, I18n, Axios, Material-UI and E2E encryption. Project team member: 4 members.`,
+            time: `2022`,
+            descriptionImage: ["/trios-desktop-0.png", "/trios-desktop-1.png"],
+          },
+          actions: [
+            {
+              name: `Nguyen Manh Thang`,
+              image: `https://avatars.githubusercontent.com/u/77906116?v=4`,
+              url: `https://github.com/ngmthaq`,
+              title: `joined PJ16 - Improve UI in 2022`,
+              label: `fa-solid fa-check`,
+            },
+            {
+              name: `Nguyen Manh Thang`,
+              image: `https://avatars.githubusercontent.com/u/77906116?v=4`,
+              url: `https://github.com/ngmthaq`,
+              title: `joined PJ06 - Init audio calling in 2022`,
               label: `fa-solid fa-check`,
             },
           ],
