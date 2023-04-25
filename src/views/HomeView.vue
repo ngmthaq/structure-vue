@@ -20,6 +20,7 @@
     <HomeServices />
     <HomeSkills />
     <HomeExperiences />
+    <HomeContact />
   </main>
 </template>
 
@@ -31,6 +32,7 @@ import HomeBanner from "@/components/home/HomeBanner.vue";
 import HomeServices from "@/components/home/HomeServices.vue";
 import HomeSkills from "@/components/home/HomeSkills.vue";
 import HomeExperiences from "@/components/home/HomeExperiences.vue";
+import HomeContact from "@/components/home/HomeContact.vue";
 
 const top = 150;
 const nav = ["home", "services", "skills", "experiences", "contact"];

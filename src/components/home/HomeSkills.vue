@@ -147,7 +147,12 @@ const app = defineClassComponent(
   width: 100%;
   padding: 100px 0;
   min-height: 100vh;
-  background-color: $black;
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("@/assets/img/img-home-banner.jpg");
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  position: relative;
+  background-attachment: fixed;
 
   & #slick,
   & #slick2,

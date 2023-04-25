@@ -437,6 +437,7 @@ const app = defineClassComponent(
   width: 100%;
   padding-top: 100px;
   background: #0d1117;
+  border-bottom: 1px solid $dark;
 }
 
 .title-cont {
