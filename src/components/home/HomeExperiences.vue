@@ -320,7 +320,7 @@ const app = defineClassComponent(
             Apps can create groups to message each other. In the later phases, the application has integrated calling for 
             individuals as well as calling in groups. In addition, the application also supports setting up online meetings and screen sharing. 
             This is an application located in the Trios ecosystem including: Trios Web Admin, Trios Android, Trios IOS and Trios Desktop. 
-            Project using Reactjs, Electron, SQLite, Redux, Saga, I18n, Axios, Material-UI and E2E encryption. Project team member: 4 members.`,
+            Project is using Reactjs, Electron, SQLite, Redux, Saga, I18n, Axios, Material-UI and E2E encryption. Project team member: 4 members.`,
             time: `2022`,
             descriptionImage: ["/trios-desktop-0.png", "/trios-desktop-1.png"],
           },
@@ -337,6 +337,36 @@ const app = defineClassComponent(
               image: `https://avatars.githubusercontent.com/u/77906116?v=4`,
               url: `https://github.com/ngmthaq`,
               title: `joined PJ06 - Init audio calling in 2022`,
+              label: `fa-solid fa-check`,
+            },
+          ],
+        },
+        {
+          company: {
+            name: `bGlobal JSC - Blayn Web Admin`,
+            image: LogoBGlobal,
+            url: `https://bglobalcorp.com/`,
+            description: `This is a website for managing POS machines in the ecosystem of Blayn (https://www.blayn.com/) - a company that specializes 
+            in providing payment solutions for F&B businesses with its POS products. Project features: Login, logout, manage category of POS machine, 
+            manage products in POS machine, manage favorive products, export/import products into POS machine from CSV, employee manager, multiple language of 
+            products, preview products in POS machine, update holiday and dayoff, toggle show/hide product in POS machine, create logger,... 
+            Project team member: 5 members. Project is using HTML, CSS, jQuery, PHP, Smarty Template engine, PHP-Mailer and MySQL. Some pictures of project:`,
+            time: `2022`,
+            descriptionImage: ["/blayn-0.png", "/blayn-1.png", "/blayn-2.png", "/blayn-3.png"],
+          },
+          actions: [
+            {
+              name: `Nguyen Manh Thang`,
+              image: `https://avatars.githubusercontent.com/u/77906116?v=4`,
+              url: `https://github.com/ngmthaq`,
+              title: `joined PJ106 - Improve UI of Web Admin in 2022`,
+              label: `fa-solid fa-check`,
+            },
+            {
+              name: `Nguyen Manh Thang`,
+              image: `https://avatars.githubusercontent.com/u/77906116?v=4`,
+              url: `https://github.com/ngmthaq`,
+              title: `joined PJ110 - Init multi language for POS Machine in 2023`,
               label: `fa-solid fa-check`,
             },
           ],
