@@ -394,6 +394,31 @@ const app = defineClassComponent(
             },
           ],
         },
+        {
+          company: {
+            name: `bGlobal JSC - HAJ`,
+            image: LogoBGlobal,
+            url: `https://bglobalcorp.com/`,
+            description: `This is a website that aims to provide job search services in Japan. 
+            Built with PWA technology that can be downloaded and installed on both computers, 
+            android and ios. The functions of the application are filtering jobs, saving and deleting 
+            jobs that are not suitable, viewing job details, contacting companies to work, viewing 
+            history of viewed jobs,... Project is using Typescript, Reactjs, Redux-toolkits, Material-UI, 
+            Service Worker, Google Analytics, Firebase Cloud Messaging,... Project member: 2 members.
+            (https://pwa.shufukita.com/)`,
+            time: `2023`,
+            descriptionImage: ["/haj-0.png", "/haj-1.png", "/haj-2.png", "/haj-3.png"],
+          },
+          actions: [
+            {
+              name: `Nguyen Manh Thang`,
+              image: `https://avatars.githubusercontent.com/u/77906116?v=4`,
+              url: `https://github.com/ngmthaq`,
+              title: `joined PJ01 - Init minestone 1 in 2023`,
+              label: `fa-solid fa-check`,
+            },
+          ],
+        },
       ],
     });
 
