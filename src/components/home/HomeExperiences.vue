@@ -371,6 +371,29 @@ const app = defineClassComponent(
             },
           ],
         },
+        {
+          company: {
+            name: `bGlobal JSC - Coast Guard`,
+            image: LogoBGlobal,
+            url: `https://bglobalcorp.com/`,
+            description: `This is a website with the purpose of supporting the management of ships and weather used internally 
+            in the Coast Guard management system. The functions of the project include: login, log out, add users to the system, 
+            manage ships in police observation groups, port management, violation ship management, area management monitor at sea, 
+            view information about ships, view ship's movement history, generate reports, view reports,... Project is using Reactjs, Redux, 
+            Saga, Material-UI, Leaflet. Project team member: 2 members. Some pictures of project:`,
+            time: `2022`,
+            descriptionImage: ["/csb-0.png", "/csb-1.png", "/csb-2.png", "/csb-3.png"],
+          },
+          actions: [
+            {
+              name: `Nguyen Manh Thang`,
+              image: `https://avatars.githubusercontent.com/u/77906116?v=4`,
+              url: `https://github.com/ngmthaq`,
+              title: `joined PJ01 - Init application to support marine police work in 2022`,
+              label: `fa-solid fa-check`,
+            },
+          ],
+        },
       ],
     });
 
