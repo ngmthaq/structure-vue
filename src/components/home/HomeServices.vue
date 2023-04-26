@@ -20,12 +20,12 @@
 </template>
 
 <script setup lang="ts">
+import AppConst from "@/const/app.const";
 import { Component, defineClassComponent } from "@/core/component.core";
+import EventBus from "@/plugins/bus.plugin";
 import imgECommerce from "@/assets/img/img-e-comerce.jpg";
 import imgWebApp from "@/assets/img/img-web-app.jpg";
 import imgPWA from "@/assets/img/img-progressive-web-app.jpg";
-import EventBus from "@/plugins/bus.plugin";
-import { CUSTOM_EVENTS } from "@/const/app.const";
 
 const app = defineClassComponent(
   class HomeBanner extends Component {
@@ -61,7 +61,7 @@ const app = defineClassComponent(
     };
 
     public onOver = () => {
-      EventBus.emit<string>(CUSTOM_EVENTS.onChangeTab, "services");
+      EventBus.emit<string>(AppConst.CUSTOM_EVENTS.onChangeTab, "services");
     };
   },
 );

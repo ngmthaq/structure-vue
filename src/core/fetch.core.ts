@@ -1,4 +1,4 @@
-import { API_FETCH_MODE } from "@/const/api.const";
+import ApiConst from "@/const/api.const";
 import type { HttpBody, HttpMethods, HttpParams, HttpRequestInit } from "@/types/fetch";
 
 abstract class Fetch {
@@ -80,7 +80,7 @@ abstract class Fetch {
       const path = uri.startsWith("/") ? uri.substring(1) : uri;
       const fullPath = uri.indexOf("http://") === 0 || uri.indexOf("https://") === 0 ? uri : baseUrl + path;
       const headers = this.configs.headers;
-      const mode = API_FETCH_MODE;
+      const mode = ApiConst.API_FETCH_MODE;
       configs.headers.forEach((value, key) => headers.append(key, value));
       mode === "no-cache" && headers.append("Fetch-Timestamp", Date.now().toString());
       const response: Response = await fetch(fullPath + this.getParameters(params), {

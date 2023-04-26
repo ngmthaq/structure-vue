@@ -1,1 +1,1 @@
-export const FM = "FM";
+export default class FormatConst {}

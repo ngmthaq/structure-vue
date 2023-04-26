@@ -25,7 +25,7 @@
 </template>
 
 <script setup lang="ts">
-import { CUSTOM_EVENTS } from "@/const/app.const";
+import AppConst from "@/const/app.const";
 import { Component, defineClassComponent } from "@/core/component.core";
 import EventBus from "@/plugins/bus.plugin";
 import HomeBanner from "@/components/home/HomeBanner.vue";
@@ -65,14 +65,14 @@ const app = defineClassComponent(
 
     public onMounted: () => void = () => {
       window.addEventListener("scroll", this.onWindowScroll, true);
-      EventBus.on<string>(CUSTOM_EVENTS.onChangeTab, (data) => {
+      EventBus.on<string>(AppConst.CUSTOM_EVENTS.onChangeTab, (data) => {
         this.onOver(data);
       });
     };
 
     public onUnmounted: () => void = () => {
       window.removeEventListener("scroll", this.onWindowScroll, true);
-      EventBus.off<string>(CUSTOM_EVENTS.onChangeTab, (data) => {
+      EventBus.off<string>(AppConst.CUSTOM_EVENTS.onChangeTab, (data) => {
         this.onOver(data);
       });
     };

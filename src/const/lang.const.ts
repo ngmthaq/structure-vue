@@ -1,9 +1,11 @@
 import type { Locale, Locales } from "@/types/const";
 
-export const LOCALES: Locales = {
-  vi: { lng: "vi", iso639_1: "vi" },
-};
+export default class LangConst {
+  public static LOCALES: Locales = {
+    vi: { lng: "vi", iso639_1: "vi" },
+  };
 
-export const DEFAULT_LOCALE: Locale = LOCALES.vi;
+  public static DEFAULT_LOCALE: Locale = this.LOCALES.vi;
 
-export const DEFAULT_NS: string = "common";
+  public static DEFAULT_NS: string = "common";
+}

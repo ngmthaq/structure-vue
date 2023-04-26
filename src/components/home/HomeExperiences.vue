@@ -29,7 +29,7 @@
 </template>
 
 <script setup lang="ts">
-import { CUSTOM_EVENTS } from "@/const/app.const";
+import AppConst from "@/const/app.const";
 import { Component, defineClassComponent } from "@/core/component.core";
 import EventBus from "@/plugins/bus.plugin";
 import HomeTimelines from "./HomeTimelines.vue";
@@ -423,7 +423,7 @@ const app = defineClassComponent(
     });
 
     public onOver = () => {
-      EventBus.emit<string>(CUSTOM_EVENTS.onChangeTab, "experiences");
+      EventBus.emit<string>(AppConst.CUSTOM_EVENTS.onChangeTab, "experiences");
     };
   },
 );

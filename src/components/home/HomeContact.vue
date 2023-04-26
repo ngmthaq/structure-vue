@@ -45,14 +45,14 @@
 </template>
 
 <script setup lang="ts">
+import AppConst from "@/const/app.const";
 import { Component, defineClassComponent } from "@/core/component.core";
 import EventBus from "@/plugins/bus.plugin";
-import { CUSTOM_EVENTS } from "@/const/app.const";
 
 const app = defineClassComponent(
   class HomeBanner extends Component {
     public onOver = () => {
-      EventBus.emit<string>(CUSTOM_EVENTS.onChangeTab, "contact");
+      EventBus.emit<string>(AppConst.CUSTOM_EVENTS.onChangeTab, "contact");
     };
   },
 );
