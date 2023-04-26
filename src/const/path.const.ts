@@ -1,4 +1,4 @@
-import type { Routes } from "@/types/const";
+import type { RouteRecordRaw } from "vue-router";
 
 export default class PathConst {
   public static PATHS: Routes = {
@@ -12,3 +12,9 @@ export default class PathConst {
     },
   };
 }
+
+export type Route = RouteRecordRaw;
+
+export type Routes = {
+  home: Route;
+};

@@ -1,6 +1,5 @@
 import KeyConst from "@/const/key.const";
-import Fetch from "@/core/fetch.core";
-import type { HttpRequestInit } from "@/types/fetch";
+import Fetch, { type HttpRequestInit } from "@/core/fetch.core";
 import { getCookies } from "@/helpers/storage.helper";
 
 export class Api extends Fetch {}
