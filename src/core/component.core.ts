@@ -1,5 +1,6 @@
 import { defineProps, defineEmits, defineComponent, onBeforeMount, onBeforeUnmount, onBeforeUpdate, onMounted, onUpdated, onUnmounted } from "vue";
 import { useRouter, useRoute, onBeforeRouteLeave, onBeforeRouteUpdate } from "vue-router";
+import { useDisplay } from "vuetify";
 import { useTranslation } from "i18next-vue";
 import { Vue } from "./vue.core";
 
@@ -11,6 +12,8 @@ abstract class Component extends Vue {
   public router = useRouter();
 
   public route = useRoute();
+
+  public display = useDisplay();
 
   public constructor() {
     super();
