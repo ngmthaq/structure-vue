@@ -9,7 +9,7 @@
     "test:unit-local": "npx vitest --coverage --passWithNoTests ",
     "test:unit-remote": "npx vitest --run --passWithNoTests ",
     "test:e2e-local": "npx playwright install && npx playwright test --pass-with-no-tests",
-    "test:e2e-remote": "npx playwright install && npx playwright test --pass-with-no-tests --reporter=list",
+    "test:e2e-remote": "npx playwright install && npx playwright test --pass-with-no-tests --reporter=dot",
     "format": "npx prettier --write ./",
     "type-check": "npx vue-tsc --noEmit -p tsconfig.vitest.json --composite false",
     "lint": "npx eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --ignore-path .gitignore"
