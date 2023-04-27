@@ -31,4 +31,4 @@ jobs:
     - run: yarn type-check
     - run: yarn test:unit-remote
     - run: yarn test:e2e-remote
-    - run: yarn build --if-present
+    - run: yarn build
