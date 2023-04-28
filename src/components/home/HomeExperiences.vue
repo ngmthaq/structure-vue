@@ -396,7 +396,7 @@ const app = defineClassComponent(
         },
         {
           company: {
-            name: `bGlobal JSC - HAJ`,
+            name: `bGlobal JSC - Unified X,`,
             image: LogoBGlobal,
             url: `https://bglobalcorp.com/`,
             description: `This is a website that aims to provide job search services in Japan. 
