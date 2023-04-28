@@ -405,7 +405,7 @@ const app = defineClassComponent(
             contacting companies to work, viewing history of viewed jobs,... Project is using Typescript, Reactjs, Redux-toolkits, Material-UI, 
             Service Worker, Google Analytics, Firebase Cloud Messaging,... Project member: 2 members.`,
             time: `2023`,
-            descriptionImage: ["/haj-0.png", "/haj-1.png", "/haj-2.png", "/haj-3.png"],
+            descriptionImage: [],
           },
           actions: [
             {
