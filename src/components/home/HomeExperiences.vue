@@ -399,13 +399,11 @@ const app = defineClassComponent(
             name: `bGlobal JSC - Unified X,`,
             image: LogoBGlobal,
             url: `https://bglobalcorp.com/`,
-            description: `This is a website that aims to provide job search services in Japan. 
-            Built with PWA technology that can be downloaded and installed on both computers, 
-            android and ios. The functions of the application are filtering jobs, saving and deleting 
-            jobs that are not suitable, viewing job details, contacting companies to work, viewing 
-            history of viewed jobs,... Project is using Typescript, Reactjs, Redux-toolkits, Material-UI, 
-            Service Worker, Google Analytics, Firebase Cloud Messaging,... Project member: 2 members.
-            (https://pwa.shufukita.com/)`,
+            description: `This is a website and PWA aiming to provide a new way to find a job. 
+            Adapting PWA technology for quick and easy to go through the job listings, working for PC and mobile devices. 
+            The functions of the application are filtering jobs, saving and deleting jobs that are not suitable, viewing job details, 
+            contacting companies to work, viewing history of viewed jobs,... Project is using Typescript, Reactjs, Redux-toolkits, Material-UI, 
+            Service Worker, Google Analytics, Firebase Cloud Messaging,... Project member: 2 members.`,
             time: `2023`,
             descriptionImage: ["/haj-0.png", "/haj-1.png", "/haj-2.png", "/haj-3.png"],
           },
