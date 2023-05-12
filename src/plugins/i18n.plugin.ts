@@ -1,10 +1,10 @@
 import i18next from "i18next";
 import LangConst from "@/const/lang.const";
-import { vi } from "@/locales/vi";
+import { ja } from "@/locales/ja";
 
 i18next.init({
   debug: import.meta.env.DEV,
-  resources: { vi },
+  resources: { ja },
   lng: LangConst.DEFAULT_LOCALE.lng,
   fallbackLng: LangConst.DEFAULT_LOCALE.lng,
   supportedLngs: Object.values(LangConst.LOCALES).map((l) => l.lng),
@@ -12,14 +12,10 @@ i18next.init({
   defaultNS: LangConst.DEFAULT_NS,
 });
 
-function translateWithNS(key: string, ns: string = LangConst.DEFAULT_NS) {
-  return i18next.t(key, { ns: ns });
-}
+const translate = i18next.t;
 
-async function changeLocale(locale: string) {
+const changeLocale = (locale: string) => {
   return i18next.changeLanguage(locale);
-}
+};
 
-export default i18next;
-
-export { translateWithNS, changeLocale };
+export { i18next, translate, changeLocale };

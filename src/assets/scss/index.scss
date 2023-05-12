@@ -1,13 +1,1 @@
-@import "./variables";
-@import "./mixins";
-
-body {
-  overflow-y: scroll;
-  scroll-behavior: smooth;
-  width: 100vw;
-  height: 100vh;
-}
-
-body::-webkit-scrollbar {
-  width: 0;
-}
+@import "./modules";

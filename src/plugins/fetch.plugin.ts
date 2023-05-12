@@ -1,5 +1,3 @@
-import ApiConst from "@/const/api.const";
-
 abstract class Fetch {
   protected configs: HttpRequestInit;
   protected baseUrl: string | null;
@@ -69,7 +67,6 @@ abstract class Fetch {
    * @param method HttpMethods
    * @param params HttpParams
    * @param body HttpBody
-   * @param headers HttpHeaders
    * @param configs HttpRequestInit
    * @return Promise<Response>
    */
@@ -79,9 +76,7 @@ abstract class Fetch {
       const path = uri.startsWith("/") ? uri.substring(1) : uri;
       const fullPath = uri.indexOf("http://") === 0 || uri.indexOf("https://") === 0 ? uri : baseUrl + path;
       const headers = this.configs.headers;
-      const mode = ApiConst.API_FETCH_MODE;
       configs.headers.forEach((value, key) => headers.append(key, value));
-      mode === "no-cache" && headers.append("Fetch-Timestamp", Date.now().toString());
       const response: Response = await fetch(fullPath + this.getParameters(params), {
         ...this.configs,
         ...configs,

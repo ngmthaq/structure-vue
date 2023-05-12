@@ -8,17 +8,14 @@ import i18NextVue from "i18next-vue";
  * Import built-in modules | components
  */
 import App from "./App.vue";
-import vuetify from "./plugins/vuetify.plugin";
-import pinia from "./plugins/pinia.plugin";
-import router from "./plugins/router.plugin";
-import i18next from "./plugins/i18n.plugin";
-import { FontAwesomeIcon } from "./plugins/fa.plugin";
+import { pinia } from "./plugins/store.plugin";
+import { router } from "./plugins/router.plugin";
+import { i18next } from "./plugins/i18n.plugin";
+import { FontAwesomeIcon } from "./plugins/theme.plugin";
 
 /**
  * Import static files | stylesheets
  */
-import "vuetify/styles";
-import "slick-carousel/slick/slick.scss";
 import "./assets/scss/index.scss";
 
 /**
@@ -31,7 +28,6 @@ const app = createApp(App);
  */
 app.use(pinia);
 app.use(router);
-app.use(vuetify);
 app.use(i18NextVue, { i18next });
 app.component("font-awesome-icon", FontAwesomeIcon);
 

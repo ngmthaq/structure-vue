@@ -1,4 +1,4 @@
-class EventBus {
+export default class EventBus {
   public static emit<T>(eventName: string, data?: T) {
     if (window && window.CustomEvent) {
       const event = new CustomEvent<T>(eventName, { detail: data });
@@ -28,7 +28,5 @@ class EventBus {
     }
   }
 }
-
-export default EventBus;
 
 export type EventBusCallback<T> = (data: T) => void;
