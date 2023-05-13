@@ -1,1 +1,1 @@
-export default class FormatConst {}
+export class FormatConst {}

@@ -1,4 +1,4 @@
-export default class EventBus {
+export class EventBus {
   public static emit<T>(eventName: string, data?: T) {
     if (window && window.CustomEvent) {
       const event = new CustomEvent<T>(eventName, { detail: data });

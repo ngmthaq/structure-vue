@@ -1,5 +1,5 @@
 import i18next from "i18next";
-import LangConst from "@/const/lang.const";
+import { LangConst } from "@/const/lang.const";
 import { ja } from "@/locales/ja";
 
 i18next.init({

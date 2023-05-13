@@ -1,1 +1,1 @@
-export default class ApiConst {}
+export class ApiConst {}

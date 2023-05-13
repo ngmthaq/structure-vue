@@ -1,1 +1,5 @@
-export default class AppConst {}
+export class AppConst {
+  public static EVENTS = {
+    internalError: "internalError",
+  };
+}

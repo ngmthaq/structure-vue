@@ -1,4 +1,4 @@
-export default class LangConst {
+export class LangConst {
   public static LOCALES: Locales = {
     ja: { lng: "ja", iso: "ja-JP" },
   };

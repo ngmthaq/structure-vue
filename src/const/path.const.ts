@@ -1,12 +1,13 @@
 import type { RouteRecordRaw } from "vue-router";
+import HomeViewVue from "@/views/HomeView.vue";
 
-export default class PathConst {
+export class PathConst {
   public static home: Route = {
     path: "/",
     name: "home",
-    component: () => import("@/views/HomeView.vue"),
+    component: HomeViewVue,
     meta: {
-      title: "Homepage",
+      title: "title.home",
     },
   };
 }

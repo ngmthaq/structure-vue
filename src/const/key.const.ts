@@ -1,1 +1,1 @@
-export default class KeyConst {}
+export class KeyConst {}
