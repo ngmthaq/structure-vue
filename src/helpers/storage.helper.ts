@@ -1,7 +1,7 @@
 import Cookies from "js-cookie";
 import localforage from "localforage";
 
-export default class StorageHelper {
+export class StorageHelper {
   public static async setLocalForage<T>(key: string, value: T): Promise<T> {
     const output = await localforage.setItem<T>(key, value);
     return output;

@@ -8,7 +8,7 @@ import { RouterView } from "vue-router";
 import { AppConst } from "./const/app.const";
 import { BaseComponent, defineClassComponent } from "./plugins/component.plugin";
 import { EventBus } from "./plugins/bus.plugin";
-import ErrorView from "./template/ServerInternalErrorTemplate.vue";
+import ErrorView from "@/views/errors/ServerInternalErrorTemplate.vue";
 
 const app = defineClassComponent(
   class App extends BaseComponent {

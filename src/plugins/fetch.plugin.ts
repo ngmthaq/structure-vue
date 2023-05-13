@@ -1,4 +1,4 @@
-abstract class Fetch {
+export abstract class Fetch {
   protected configs: HttpRequestInit;
   protected baseUrl: string | null;
 
@@ -116,8 +116,6 @@ abstract class Fetch {
     return this.fetch(uri, "DELETE", null, body, configs);
   }
 }
-
-export default Fetch;
 
 export const defaultHttpRequestConfigs: HttpRequestInit = {
   headers: new Headers(),

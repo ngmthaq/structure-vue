@@ -1,1 +1,1 @@
-export default class BaseModel {}
+export class BaseModel {}

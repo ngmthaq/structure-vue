@@ -1,4 +1,4 @@
-import { defineProps, defineEmits, defineComponent, onBeforeMount, onBeforeUnmount, onBeforeUpdate, onMounted, onUpdated, onUnmounted } from "vue";
+import { onBeforeMount, onBeforeUnmount, onBeforeUpdate, onMounted, onUpdated, onUnmounted } from "vue";
 import { useRouter, useRoute, onBeforeRouteLeave, onBeforeRouteUpdate } from "vue-router";
 import { useTranslation } from "i18next-vue";
 import { AppConst } from "@/const/app.const";
@@ -6,7 +6,7 @@ import { useCommonStore } from "@/stores/common.store";
 import { Vue } from "./vue.plugin";
 import { EventBus } from "./bus.plugin";
 
-abstract class BaseComponent extends Vue {
+export abstract class BaseComponent extends Vue {
   public readonly t = useTranslation().t;
   public readonly i18next = useTranslation().i18next;
   public readonly router = useRouter();
@@ -23,13 +23,11 @@ abstract class BaseComponent extends Vue {
   public readonly onBeforeRouteUpdate = onBeforeRouteUpdate;
 }
 
-function defineClassComponent<C extends BaseComponent>(component: new () => C): C {
+export function defineClassComponent<C extends BaseComponent>(component: new () => C): C {
   return new component();
 }
 
-function onError(error: any) {
+export function onError(error: any) {
   console.error(error);
   EventBus.emit(AppConst.EVENTS.internalError, null);
 }
-
-export { BaseComponent, defineClassComponent, defineProps, defineComponent, defineEmits, onError };
