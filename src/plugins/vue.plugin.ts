@@ -1,11 +1,9 @@
 import { computed, reactive, ref, watch, watchEffect } from "vue";
 
-abstract class Vue {
+export abstract class Vue {
   public readonly reactive = reactive;
   public readonly ref = ref;
   public readonly computed = computed;
   public readonly watch = watch;
   public readonly watchEffect = watchEffect;
 }
-
-export { Vue };

@@ -1,7 +1,7 @@
 import humps from "humps";
 import lodash from "lodash";
 
-export default class ReferenceHelper {
+export class ReferenceHelper {
   public static range(start: number, end: number) {
     const array: Array<number> = [];
     if (start >= end) {

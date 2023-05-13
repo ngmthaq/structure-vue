@@ -1,5 +1,3 @@
 import common from "./common.json";
 
-export const ja = {
-  common,
-};
+export const ja = { common };

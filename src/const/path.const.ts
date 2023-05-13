@@ -1,5 +1,5 @@
 import type { RouteRecordRaw } from "vue-router";
-import HomeViewVue from "@/views/HomeView.vue";
+import HomeViewVue from "@/views/home/HomeView.vue";
 
 export class PathConst {
   public static home: Route = {

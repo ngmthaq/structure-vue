@@ -1,6 +1,6 @@
 import humps from "humps";
 
-export default class PrimitiveHelper {
+export class PrimitiveHelper {
   public static convertSnakeToCamel(data: string) {
     return humps.camelize(data);
   }
