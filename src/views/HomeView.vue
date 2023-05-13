@@ -1,8 +1,6 @@
 <template>Homepage</template>
 
-<script setup lang="ts">
-throw Error("Test");
-</script>
+<script setup lang="ts"></script>
 
 <style scoped lang="scss">
 @import "@/assets/scss/modules";

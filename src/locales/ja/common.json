@@ -1,3 +1,8 @@
 {
-  "hello": "Xin chào"
+  "hello": "World",
+  "title": {
+    "home": "Homepage",
+    "notFound": "Not Found",
+    "internalError": "Error"
+  }
 }
