@@ -5,14 +5,17 @@ import { AppConst } from "@/const/app.const";
 import { useCommonStore } from "@/stores/common.store";
 import { Vue } from "./vue.plugin";
 import { EventBus } from "./bus.plugin";
+import { SearchParams } from "./params.plugin";
 
 export abstract class BaseComponent extends Vue {
-  public readonly t = useTranslation().t;
-  public readonly i18next = useTranslation().i18next;
+  public readonly translation = useTranslation();
+  public readonly i18next = this.translation.i18next;
   public readonly router = useRouter();
   public readonly route = useRoute();
   public readonly commonStore = useCommonStore();
+  public readonly searchParams = new SearchParams();
 
+  public readonly t = this.translation.t;
   public readonly onBeforeMount = onBeforeMount;
   public readonly onMounted = onMounted;
   public readonly onBeforeUpdate = onBeforeUpdate;

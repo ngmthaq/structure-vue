@@ -27,6 +27,10 @@ const app = defineClassComponent(
       EventBus.on(AppConst.EVENTS.internalError, () => {
         this.isError.value = true;
       });
+
+      this.searchParams.onStateChange((params) => {
+        console.log(params);
+      });
     }
   },
 );
