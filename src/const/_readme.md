@@ -1,1 +1,0 @@
-Const (constant) in programming is a keyword that defines a variable or pointer as unchangeable. A const may be applied in an object declaration to indicate that the object, unlike a standard variable, does not change.
