@@ -1,5 +1,5 @@
 <template>
-  <ErrorView v-if="app.isError.value" />
+  <InternalErrorView v-if="app.isError.value" />
   <RouterView v-else />
 </template>
 
@@ -8,7 +8,7 @@ import { RouterView } from "vue-router";
 import { AppConst } from "./const/app.const";
 import { BaseComponent, defineClassComponent } from "./plugins/component.plugin";
 import { EventBus } from "./plugins/bus.plugin";
-import ErrorView from "@/views/errors/ServerInternalErrorTemplate.vue";
+import InternalErrorView from "@/views/errors/InternalErrorView.vue";
 
 const app = defineClassComponent(
   class App extends BaseComponent {

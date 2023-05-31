@@ -9,7 +9,7 @@
 import { BaseComponent, defineClassComponent } from "@/plugins/component.plugin";
 
 const app = defineClassComponent(
-  class Template extends BaseComponent {
+  class View extends BaseComponent {
     public constructor() {
       super();
       document.title = this.t("title.internalError");

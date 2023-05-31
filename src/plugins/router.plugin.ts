@@ -1,14 +1,14 @@
 import { createRouter, createWebHistory, type RouteRecordRaw } from "vue-router";
 import { translate } from "./i18n.plugin";
 import { PathConst } from "@/const/path.const";
-import NotFoundTemplateVue from "@/views/errors/NotFoundTemplate.vue";
+import NotFoundView from "@/views/errors/NotFoundView.vue";
 
 export const routes = Object.values(PathConst);
 
 export const pathNotFound: RouteRecordRaw = {
   path: "/:pathMatch(.*)*",
   name: "pathNotFound",
-  component: NotFoundTemplateVue,
+  component: NotFoundView,
   meta: {
     title: "title.notFound",
   },
