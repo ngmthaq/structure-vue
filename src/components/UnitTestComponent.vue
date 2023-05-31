@@ -1,7 +1,11 @@
-<template>Unit {{ props.msg }}</template>
+<template>
+  <p>Unit {{ props.msg }}</p>
+</template>
 
 <script setup lang="ts">
-const props = defineProps<{ msg: string }>();
+import type { Props } from "./UnitTestComponent";
+
+const props = defineProps<Props>();
 </script>
 
 <style scoped lang="scss">

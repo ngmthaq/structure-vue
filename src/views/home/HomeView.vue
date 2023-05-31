@@ -1,12 +1,13 @@
 <template>
   <BaseLayout>
-    <p>Homepage</p>
+    <UnitTestComponent msg="Hello world" />
     <button @click="app.onClickA">Change to A</button>
     <button @click="app.onClickB">Change to B</button>
   </BaseLayout>
 </template>
 
 <script setup lang="ts">
+import UnitTestComponent from "@/components/UnitTestComponent.vue";
 import BaseLayout from "@/layouts/BaseLayout.vue";
 import { BaseComponent, defineClassComponent } from "@/plugins/component.plugin";
 
