@@ -8,7 +8,7 @@
 <script setup lang="ts">
 import { BaseComponent, defineClassComponent } from "@/plugins/component.plugin";
 
-const app = defineClassComponent(class Template extends BaseComponent {});
+const app = defineClassComponent(class View extends BaseComponent {});
 </script>
 
 <style scoped lang="scss"></style>
