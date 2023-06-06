@@ -33,3 +33,5 @@ playwright-report/
 test/e2e-coverage
 test/e2e-test-results
 test/unit-coverage
+
+/.devbox
