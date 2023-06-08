@@ -1,6 +1,6 @@
 <template>
   <div id="home" @mousemove="app.onOver">
-    <div class="socials-container">
+    <div class="socials-container d-none d-md-flex">
       <a href="https://www.facebook.com/ngmthaq" target="_blank" class="icon facebook" rel="noopener noreferrer">
         <font-awesome-icon :icon="['fab', 'facebook-f']" />
       </a>
@@ -20,7 +20,7 @@
         <font-awesome-icon :icon="['fas', 'phone']" />
       </a>
     </div>
-    <div class="phone-number">
+    <div class="phone-number d-none d-md-flex">
       <font-awesome-icon :icon="['far', 'circle']" size="xs" class="icon" />
       <p>+84 38 988 4507</p>
     </div>
@@ -146,6 +146,12 @@ const app = defineClassComponent(
     transform: translate(-50%, -50%);
     width: 100%;
     max-width: 70vw;
+
+    @include downMd() {
+      & * {
+        font-size: 12px !important;
+      }
+    }
 
     & p {
       & code {

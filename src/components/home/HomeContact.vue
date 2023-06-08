@@ -182,6 +182,10 @@ const app = defineClassComponent(
     width: 100%;
     opacity: 0.1;
     user-select: none;
+
+    @include downMd() {
+      font-size: 48px;
+    }
   }
 }
 </style>

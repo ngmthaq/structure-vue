@@ -1,5 +1,5 @@
 <template>
-  <div id="services" @mousemove="app.onOver">
+  <div id="services" @mousemove="app.onOver" class="d-none d-md-block">
     <v-container fluid class="h-100 pa-0">
       <v-row no-gutters class="h-100">
         <v-col lg="6">

@@ -1,7 +1,7 @@
 <template>
   <div class="timeline-container">
     <div class="timeline" :style="{ marginTop: index === 0 ? `0px` : `24px` }" v-for="(item, index) in data" :key="index">
-      <div class="company-image-container">
+      <div class="company-image-container d-none d-md-block">
         <img :src="item.company.image" :alt="item.company.name" />
       </div>
       <div class="timeline-item">
@@ -31,8 +31,8 @@
                 <font-awesome-icon :icon="actionItem.label" />
               </div>
               <div class="data">
-                <img :src="actionItem.image" :alt="actionItem.name" />
-                <a :href="actionItem.url" target="_blank">{{ actionItem.name }}</a>
+                <img :src="actionItem.image" :alt="actionItem.name" class="d-none d-md-block" />
+                <a :href="actionItem.url" target="_blank" class="d-none d-md-block">{{ actionItem.name }}</a>
                 <p>{{ actionItem.title }}</p>
               </div>
             </div>
@@ -125,6 +125,14 @@ const app = defineClassComponent(
           padding: 8px 16px;
           border-radius: 8px 8px 0 0;
 
+          @include downMd() {
+            flex-direction: column;
+
+            & * {
+              text-align: center;
+            }
+          }
+
           & a {
             margin-right: 4px;
             color: $light;
@@ -160,6 +168,11 @@ const app = defineClassComponent(
               margin-bottom: 1%;
               object-fit: cover;
               cursor: pointer;
+
+              @include downMd() {
+                width: 100%;
+                margin-right: 0;
+              }
             }
           }
         }
@@ -173,7 +186,7 @@ const app = defineClassComponent(
 
           & .line {
             height: 20px;
-            width: 100%;
+            width: 20px;
             border-left: 2px solid $gray;
             margin-left: 20px;
           }
@@ -195,6 +208,7 @@ const app = defineClassComponent(
               justify-content: center;
               color: $gray;
               margin-right: 16px;
+              flex-shrink: 0;
             }
 
             & .data {
@@ -218,8 +232,14 @@ const app = defineClassComponent(
 
               & p {
                 color: $gray;
-                font-size: 14px;
+                font-size: 13px;
                 padding-left: 4px;
+
+                @include downMd() {
+                  &::first-letter {
+                    text-transform: capitalize;
+                  }
+                }
               }
             }
           }

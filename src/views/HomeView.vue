@@ -2,7 +2,7 @@
   <main>
     <header :class="{ colorer: app.state.isScrolled }">
       <h3>Nguyen Manh Thang</h3>
-      <nav>
+      <nav class="d-none d-md-flex">
         <a
           :key="index"
           :class="{ active: navItem === app.state.current }"

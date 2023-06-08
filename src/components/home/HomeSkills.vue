@@ -5,122 +5,242 @@
       <h2 class="title">Skills</h2>
     </div>
     <p class="text-center text-white">This is my technical skills, please check it out!</p>
-    <SlickCarosel
-      id="slick"
-      :slides-to-show="5"
-      :center-mode="false"
-      :dots="false"
-      :autoplay="true"
-      :arrows="false"
-      :rtl="false"
-      :pause-on-hover="false"
-      :draggable="false"
-    >
-      <div class="skill_slider_item">
-        <img src="@/assets/img/icon-html.png" />
-        <p>HTML</p>
-      </div>
-      <div class="skill_slider_item">
-        <img src="@/assets/img/icon-css.png" />
-        <p>CSS</p>
-      </div>
-      <div class="skill_slider_item">
-        <img src="@/assets/img/icon-js.png" />
-        <p>Javascript</p>
-      </div>
-      <div class="skill_slider_item">
-        <img src="@/assets/img/icon-jquery.png" />
-        <p>jQuery</p>
-      </div>
-      <div class="skill_slider_item">
-        <img src="@/assets/img/icon-bootstrap.png" />
-        <p>Bootstrap</p>
-      </div>
-      <div class="skill_slider_item">
-        <img src="@/assets/img/icon-sass.png" />
-        <p>SASS</p>
-      </div>
-    </SlickCarosel>
-    <SlickCarosel
-      id="slick2"
-      :slides-to-show="5"
-      :center-mode="false"
-      :dots="false"
-      :autoplay="true"
-      :arrows="false"
-      :rtl="true"
-      :pause-on-hover="false"
-      :draggable="false"
-    >
-      <div class="skill_slider_item">
-        <img src="@/assets/img/icon-reactjs.png" />
-        <p>React JS</p>
-      </div>
-      <div class="skill_slider_item">
-        <img src="@/assets/img/icon-nextjs.png" />
-        <p>Next JS</p>
-      </div>
-      <div class="skill_slider_item">
-        <img src="@/assets/img/icon-electronjs.png" />
-        <p>Electron</p>
-      </div>
-      <div class="skill_slider_item">
-        <img src="@/assets/img/icon-mui.png" />
-        <p>Material UI</p>
-      </div>
-      <div class="skill_slider_item">
-        <img src="@/assets/img/icon-typescript.png" />
-        <p>Typescript</p>
-      </div>
-      <div class="skill_slider_item">
-        <img src="@/assets/img/icon-vuejs.png" />
-        <p>Vue JS</p>
-      </div>
-      <div class="skill_slider_item">
-        <img src="@/assets/img/icon-nuxt.png" />
-        <p>Nuxt JS</p>
-      </div>
-      <div class="skill_slider_item">
-        <img src="@/assets/img/icon-vuetify.png" />
-        <p>Vuetify</p>
-      </div>
-    </SlickCarosel>
-    <SlickCarosel
-      id="slick3"
-      :slides-to-show="5"
-      :center-mode="false"
-      :dots="false"
-      :autoplay="true"
-      :arrows="false"
-      :rtl="false"
-      :pause-on-hover="false"
-      :draggable="false"
-    >
-      <div class="skill_slider_item">
-        <img src="@/assets/img/icon-git.png" />
-        <p>Git</p>
-      </div>
-      <div class="skill_slider_item">
-        <img src="@/assets/img/icon-express.png" />
-        <p>Express JS</p>
-      </div>
-      <div class="skill_slider_item">
-        <img src="@/assets/img/icon-php.png" />
-        <p>PHP</p>
-      </div>
-      <div class="skill_slider_item">
-        <img src="@/assets/img/icon-laravel.png" />
-        <p>Laravel</p>
-      </div>
-      <div class="skill_slider_item">
-        <img src="@/assets/img/icon-mysql.png" />
-        <p>MySQL</p>
-      </div>
-      <div class="skill_slider_item">
-        <img src="@/assets/img/icon-sqlite.png" />
-        <p>SQLite</p>
-      </div>
-    </SlickCarosel>
+    <div class="d-none d-md-block">
+      <SlickCarosel
+        id="slick"
+        :slides-to-show="5"
+        :center-mode="false"
+        :dots="false"
+        :autoplay="true"
+        :arrows="false"
+        :rtl="false"
+        :pause-on-hover="false"
+        :draggable="false"
+      >
+        <div class="skill_slider_item">
+          <img src="@/assets/img/icon-html.png" />
+          <p>HTML</p>
+        </div>
+        <div class="skill_slider_item">
+          <img src="@/assets/img/icon-css.png" />
+          <p>CSS</p>
+        </div>
+        <div class="skill_slider_item">
+          <img src="@/assets/img/icon-js.png" />
+          <p>Javascript</p>
+        </div>
+        <div class="skill_slider_item">
+          <img src="@/assets/img/icon-jquery.png" />
+          <p>jQuery</p>
+        </div>
+        <div class="skill_slider_item">
+          <img src="@/assets/img/icon-bootstrap.png" />
+          <p>Bootstrap</p>
+        </div>
+        <div class="skill_slider_item">
+          <img src="@/assets/img/icon-sass.png" />
+          <p>SASS</p>
+        </div>
+      </SlickCarosel>
+      <SlickCarosel
+        id="slick2"
+        :slides-to-show="5"
+        :center-mode="false"
+        :dots="false"
+        :autoplay="true"
+        :arrows="false"
+        :rtl="true"
+        :pause-on-hover="false"
+        :draggable="false"
+      >
+        <div class="skill_slider_item">
+          <img src="@/assets/img/icon-reactjs.png" />
+          <p>React JS</p>
+        </div>
+        <div class="skill_slider_item">
+          <img src="@/assets/img/icon-nextjs.png" />
+          <p>Next JS</p>
+        </div>
+        <div class="skill_slider_item">
+          <img src="@/assets/img/icon-electronjs.png" />
+          <p>Electron</p>
+        </div>
+        <div class="skill_slider_item">
+          <img src="@/assets/img/icon-mui.png" />
+          <p>Material UI</p>
+        </div>
+        <div class="skill_slider_item">
+          <img src="@/assets/img/icon-typescript.png" />
+          <p>Typescript</p>
+        </div>
+        <div class="skill_slider_item">
+          <img src="@/assets/img/icon-vuejs.png" />
+          <p>Vue JS</p>
+        </div>
+        <div class="skill_slider_item">
+          <img src="@/assets/img/icon-nuxt.png" />
+          <p>Nuxt JS</p>
+        </div>
+        <div class="skill_slider_item">
+          <img src="@/assets/img/icon-vuetify.png" />
+          <p>Vuetify</p>
+        </div>
+      </SlickCarosel>
+      <SlickCarosel
+        id="slick3"
+        :slides-to-show="5"
+        :center-mode="false"
+        :dots="false"
+        :autoplay="true"
+        :arrows="false"
+        :rtl="false"
+        :pause-on-hover="false"
+        :draggable="false"
+      >
+        <div class="skill_slider_item">
+          <img src="@/assets/img/icon-git.png" />
+          <p>Git</p>
+        </div>
+        <div class="skill_slider_item">
+          <img src="@/assets/img/icon-express.png" />
+          <p>Express JS</p>
+        </div>
+        <div class="skill_slider_item">
+          <img src="@/assets/img/icon-php.png" />
+          <p>PHP</p>
+        </div>
+        <div class="skill_slider_item">
+          <img src="@/assets/img/icon-laravel.png" />
+          <p>Laravel</p>
+        </div>
+        <div class="skill_slider_item">
+          <img src="@/assets/img/icon-mysql.png" />
+          <p>MySQL</p>
+        </div>
+        <div class="skill_slider_item">
+          <img src="@/assets/img/icon-sqlite.png" />
+          <p>SQLite</p>
+        </div>
+      </SlickCarosel>
+    </div>
+    <div class="d-block d-md-none">
+      <SlickCarosel
+        id="slick4"
+        :slides-to-show="3"
+        :center-mode="false"
+        :dots="false"
+        :autoplay="true"
+        :arrows="false"
+        :rtl="false"
+        :pause-on-hover="false"
+        :draggable="false"
+      >
+        <div class="skill_slider_item">
+          <img src="@/assets/img/icon-html.png" />
+          <p>HTML</p>
+        </div>
+        <div class="skill_slider_item">
+          <img src="@/assets/img/icon-css.png" />
+          <p>CSS</p>
+        </div>
+        <div class="skill_slider_item">
+          <img src="@/assets/img/icon-js.png" />
+          <p>Javascript</p>
+        </div>
+        <div class="skill_slider_item">
+          <img src="@/assets/img/icon-jquery.png" />
+          <p>jQuery</p>
+        </div>
+        <div class="skill_slider_item">
+          <img src="@/assets/img/icon-bootstrap.png" />
+          <p>Bootstrap</p>
+        </div>
+        <div class="skill_slider_item">
+          <img src="@/assets/img/icon-sass.png" />
+          <p>SASS</p>
+        </div>
+      </SlickCarosel>
+      <SlickCarosel
+        id="slick5"
+        :slides-to-show="3"
+        :center-mode="false"
+        :dots="false"
+        :autoplay="true"
+        :arrows="false"
+        :rtl="true"
+        :pause-on-hover="false"
+        :draggable="false"
+      >
+        <div class="skill_slider_item">
+          <img src="@/assets/img/icon-reactjs.png" />
+          <p>React JS</p>
+        </div>
+        <div class="skill_slider_item">
+          <img src="@/assets/img/icon-nextjs.png" />
+          <p>Next JS</p>
+        </div>
+        <div class="skill_slider_item">
+          <img src="@/assets/img/icon-electronjs.png" />
+          <p>Electron</p>
+        </div>
+        <div class="skill_slider_item">
+          <img src="@/assets/img/icon-mui.png" />
+          <p>Material UI</p>
+        </div>
+        <div class="skill_slider_item">
+          <img src="@/assets/img/icon-typescript.png" />
+          <p>Typescript</p>
+        </div>
+        <div class="skill_slider_item">
+          <img src="@/assets/img/icon-vuejs.png" />
+          <p>Vue JS</p>
+        </div>
+        <div class="skill_slider_item">
+          <img src="@/assets/img/icon-nuxt.png" />
+          <p>Nuxt JS</p>
+        </div>
+        <div class="skill_slider_item">
+          <img src="@/assets/img/icon-vuetify.png" />
+          <p>Vuetify</p>
+        </div>
+      </SlickCarosel>
+      <SlickCarosel
+        id="slick6"
+        :slides-to-show="3"
+        :center-mode="false"
+        :dots="false"
+        :autoplay="true"
+        :arrows="false"
+        :rtl="false"
+        :pause-on-hover="false"
+        :draggable="false"
+      >
+        <div class="skill_slider_item">
+          <img src="@/assets/img/icon-git.png" />
+          <p>Git</p>
+        </div>
+        <div class="skill_slider_item">
+          <img src="@/assets/img/icon-express.png" />
+          <p>Express JS</p>
+        </div>
+        <div class="skill_slider_item">
+          <img src="@/assets/img/icon-php.png" />
+          <p>PHP</p>
+        </div>
+        <div class="skill_slider_item">
+          <img src="@/assets/img/icon-laravel.png" />
+          <p>Laravel</p>
+        </div>
+        <div class="skill_slider_item">
+          <img src="@/assets/img/icon-mysql.png" />
+          <p>MySQL</p>
+        </div>
+        <div class="skill_slider_item">
+          <img src="@/assets/img/icon-sqlite.png" />
+          <p>SQLite</p>
+        </div>
+      </SlickCarosel>
+    </div>
   </div>
 </template>
 
@@ -156,7 +276,10 @@ const app = defineClassComponent(
 
   & #slick,
   & #slick2,
-  & #slick3 {
+  & #slick3,
+  & #slick4,
+  & #slick5,
+  & #slick6 {
     margin-top: 80px;
   }
 
@@ -182,6 +305,24 @@ const app = defineClassComponent(
       margin-bottom: 0;
       color: $light;
       opacity: 0.9;
+    }
+
+    @include downMd() {
+      & img {
+        width: auto;
+        height: 60px;
+        object-fit: contain;
+        margin-bottom: 16px;
+      }
+
+      & p {
+        text-align: center;
+        font-size: 14px;
+        font-weight: 500;
+        margin-bottom: 0;
+        color: $light;
+        opacity: 0.9;
+      }
     }
   }
 }
@@ -219,6 +360,10 @@ const app = defineClassComponent(
     width: 100%;
     opacity: 0.1;
     user-select: none;
+
+    @include downMd() {
+      font-size: 48px;
+    }
   }
 }
 </style>
