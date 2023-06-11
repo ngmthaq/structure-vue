@@ -38,6 +38,7 @@ import LogoITPlus from "@/assets/img/logo-itplus.jpg";
 import LogoVietIS from "@/assets/img/logo-vietis.jpg";
 import LogoSunAsterisk from "@/assets/img/logo-sun-asterisk.jpg";
 import LogoBGlobal from "@/assets/img/logo-bglobal.svg";
+import LogoUX from "@/assets/img/logo-ux.jpg";
 
 const app = defineClassComponent(
   class HomeBanner extends Component {
@@ -275,9 +276,9 @@ const app = defineClassComponent(
             application ecosystem and it compatible with desktop only. Application will be built with Reactjs,
             Redux, Saga, Material-UI and Axios. Project's team member is 1 member. Project features: login, logout,
             setup user infomation for user who login into this application for the first time, change user password,
-            change user information, invite people into Trios ecosystem and upgrage server pricing. Some pictures of the application:`,
+            change user information, invite people into Trios ecosystem and upgrage server pricing.`,
             time: `2022`,
-            descriptionImage: ["/trios-web-admin-0.png", "/trios-web-admin-1.png", "/trios-web-admin-2.png", "/trios-web-admin-3.png"],
+            descriptionImage: [],
           },
           actions: [
             {
@@ -297,9 +298,9 @@ const app = defineClassComponent(
             description: `The website has features such as posting job vacancies, sharing knowledge, sharing history and developing direction of the company.
             Compatible with all types of desktop, tablet and phone screens. Application will be built with Reactjs, Nextjs,
             Redux, Saga, Material-UI and Axios. Project's team member is 2 members. Project features: homepage, about us, blogs, products, career, 
-            services and contact. Some pictures of the application:`,
+            services and contact.`,
             time: `2022`,
-            descriptionImage: ["/bglobal-website-0.png", "/bglobal-website-1.png", "/bglobal-website-2.png", "/bglobal-website-3.png"],
+            descriptionImage: [],
           },
           actions: [
             {
@@ -322,7 +323,7 @@ const app = defineClassComponent(
             This is an application located in the Trios ecosystem including: Trios Web Admin, Trios Android, Trios IOS and Trios Desktop. 
             Project is using Reactjs, Electron, SQLite, Redux, Saga, I18n, Axios, Material-UI and E2E encryption. Project team member: 4 members.`,
             time: `2022`,
-            descriptionImage: ["/trios-desktop-0.png", "/trios-desktop-1.png"],
+            descriptionImage: [],
           },
           actions: [
             {
@@ -350,9 +351,9 @@ const app = defineClassComponent(
             in providing payment solutions for F&B businesses with its POS products. Project features: Login, logout, manage category of POS machine, 
             manage products in POS machine, manage favorive products, export/import products into POS machine from CSV, employee manager, multiple language of 
             products, preview products in POS machine, update holiday and dayoff, toggle show/hide product in POS machine, create logger,... 
-            Project team member: 5 members. Project is using HTML, CSS, jQuery, PHP, Smarty Template engine, PHP-Mailer and MySQL. Some pictures of project:`,
+            Project team member: 5 members. Project is using HTML, CSS, jQuery, PHP, Smarty Template engine, PHP-Mailer and MySQL.`,
             time: `2022`,
-            descriptionImage: ["/blayn-0.png", "/blayn-1.png", "/blayn-2.png", "/blayn-3.png"],
+            descriptionImage: [],
           },
           actions: [
             {
@@ -369,6 +370,13 @@ const app = defineClassComponent(
               title: `joined PJ110 - Init multi language for POS Machine in 2023`,
               label: `fa-solid fa-check`,
             },
+            {
+              name: `Nguyen Manh Thang`,
+              image: `https://avatars.githubusercontent.com/u/77906116?v=4`,
+              url: `https://github.com/ngmthaq`,
+              title: `joined PJ115 - Update new feature of multiple languages in 2023`,
+              label: `fa-solid fa-check`,
+            },
           ],
         },
         {
@@ -380,9 +388,9 @@ const app = defineClassComponent(
             in the Coast Guard management system. The functions of the project include: login, log out, add users to the system, 
             manage ships in police observation groups, port management, violation ship management, area management monitor at sea, 
             view information about ships, view ship's movement history, generate reports, view reports,... Project is using Reactjs, Redux, 
-            Saga, Material-UI, Leaflet. Project team member: 2 members. Some pictures of project:`,
+            Saga, Material-UI, Leaflet. Project team member: 2 members.`,
             time: `2022`,
-            descriptionImage: ["/csb-0.png", "/csb-1.png", "/csb-2.png", "/csb-3.png"],
+            descriptionImage: [],
           },
           actions: [
             {
@@ -406,7 +414,7 @@ const app = defineClassComponent(
             history of viewed jobs,... Project is using Typescript, Reactjs, Redux-toolkits, Material-UI, 
             Service Worker, Google Analytics, Firebase Cloud Messaging,... Project member: 2 members.`,
             time: `2023`,
-            descriptionImage: ["/haj-0.png", "/haj-1.png", "/haj-2.png", "/haj-3.png"],
+            descriptionImage: [],
           },
           actions: [
             {
@@ -414,6 +422,30 @@ const app = defineClassComponent(
               image: `https://avatars.githubusercontent.com/u/77906116?v=4`,
               url: `https://github.com/ngmthaq`,
               title: `joined PJ01 - Init minestone 1 in 2023`,
+              label: `fa-solid fa-check`,
+            },
+          ],
+        },
+        {
+          company: {
+            name: `UX`,
+            image: LogoUX,
+            url: `https://www.unifiedx.co.jp/`,
+            description: `This is the webadmin of "骨軟部放射線研究会 会員システム".
+            Project is using Typescript, Vuejs 3, Vue Router, Pinia, Bootstrap,
+            Firebase Cloud Messaging,...
+            The functions of the application are login (guest | user | admin), user register,
+            manage users, manage events, join the event, payment, contact...
+            Project member: 2 members.`,
+            time: `2023`,
+            descriptionImage: [],
+          },
+          actions: [
+            {
+              name: `Nguyen Manh Thang`,
+              image: `https://avatars.githubusercontent.com/u/77906116?v=4`,
+              url: `https://github.com/ngmthaq`,
+              title: `joined phase 1 - Init minestone 1 in 2023`,
               label: `fa-solid fa-check`,
             },
           ],
