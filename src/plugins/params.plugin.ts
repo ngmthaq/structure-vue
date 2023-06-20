@@ -1,4 +1,4 @@
-import { EventBus } from "./bus.plugin";
+import { GblobalEvent } from "./event.plugin";
 import { Vue } from "./vue.plugin";
 
 export class SearchParams extends Vue {
@@ -8,7 +8,7 @@ export class SearchParams extends Vue {
   public constructor() {
     super();
     this.params = this.getAllFromUrl();
-    EventBus.on(SEARCH_PARAMS_EVENTS.updated, (data: SearchParamState) => {
+    GblobalEvent.on(SEARCH_PARAMS_EVENTS.updated, (data: SearchParamState) => {
       this.params = data;
       this.hook(this.params);
     });
@@ -32,7 +32,7 @@ export class SearchParams extends Vue {
     const newParams = Object.fromEntries(Object.entries(params).filter((param) => ![null, undefined, ""].includes(param[1])));
     if (window.location.search !== string) {
       this.pushState(string);
-      EventBus.emit(SEARCH_PARAMS_EVENTS.updated, newParams);
+      GblobalEvent.emit(SEARCH_PARAMS_EVENTS.updated, newParams);
     }
   };
 

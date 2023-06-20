@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "dev": "npx vite",
+    "dev": "npx vite --host",
     "build": "npx vite build",
     "preview": "npx vite preview",
     "test": "yarn test:unit-remote && yarn test:e2e-remote",

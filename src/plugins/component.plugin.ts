@@ -4,7 +4,7 @@ import { useTranslation } from "i18next-vue";
 import { AppConst } from "@/const/app.const";
 import { useCommonStore } from "@/stores/common.store";
 import { Vue } from "./vue.plugin";
-import { EventBus } from "./bus.plugin";
+import { GblobalEvent } from "./event.plugin";
 import { SearchParams } from "./params.plugin";
 
 export abstract class BaseComponent extends Vue {
@@ -32,5 +32,5 @@ export function defineClassComponent<C extends BaseComponent>(component: new () 
 
 export function onError(error: any) {
   console.error(error);
-  EventBus.emit(AppConst.EVENTS.internalError, null);
+  GblobalEvent.emit(AppConst.EVENTS.internalError, null);
 }

@@ -1,32 +1,53 @@
 export class EventBus {
-  public static emit<T>(eventName: string, data?: T) {
-    if (window && window.CustomEvent) {
-      const event = new CustomEvent<T>(eventName, { detail: data });
-      window.dispatchEvent(event);
-    } else {
-      console.error("Error: window is not defined");
-    }
+  public configs?: TBusConfigs;
+  public bus: TBus;
+
+  public constructor(configs?: TBusConfigs) {
+    this.configs = configs;
+    this.bus = {};
   }
 
-  public static on<T>(eventName: string, callback: EventBusCallback<T>) {
-    if (window) {
-      window.addEventListener(eventName, (e: any) => {
-        callback(e.detail);
-      });
-    } else {
-      console.error("Error: window is not defined");
-    }
-  }
+  public on: TEventBus["on"] = (key, handler) => {
+    if (this.bus[key] === undefined) this.bus[key] = [];
+    this.bus[key]?.push(handler);
+    return () => this.off(key, handler);
+  };
 
-  public static off<T>(eventName: string, callback: EventBusCallback<T>) {
-    if (window) {
-      window.removeEventListener(eventName, (e: any) => {
-        callback(e.detail);
-      });
-    } else {
-      console.error("Error: window is not defined");
-    }
-  }
+  public off: TEventBus["off"] = (key, handler) => {
+    const index = this.bus[key]?.indexOf(handler) ?? -1;
+    this.bus[key]?.splice(index >>> 0, 1);
+  };
+
+  public once: TEventBus["once"] = (key, handler) => {
+    const handle = (payload: Parameters<typeof handler>) => {
+      handler(payload);
+      this.off(key, handle as typeof handler);
+    };
+    this.on(key, handle as typeof handler);
+  };
+
+  public emit: TEventBus["emit"] = (key, payload) => {
+    this.bus[key]?.forEach((callback) => {
+      try {
+        callback(payload);
+      } catch (e: any) {
+        this.configs?.onError(e);
+      }
+    });
+  };
 }
 
-export type EventBusCallback<T> = (data: T) => void;
+export type TEventHandler = (payload: any) => void;
+
+export type TBus = Record<string, TEventHandler[]>;
+
+export type TBusConfigs = {
+  onError: (...params: any[]) => void;
+};
+
+export type TEventBus = {
+  on(key: string, handler: TEventHandler): () => void;
+  off(key: string, handler: TEventHandler): void;
+  emit<P>(key: string, payload: P): void;
+  once(key: string, handler: TEventHandler): void;
+};
