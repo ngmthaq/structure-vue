@@ -8,12 +8,11 @@ import { GlobalEvent } from "./event.plugin";
 import { SearchParams } from "./params.plugin";
 
 export abstract class BaseComponent extends Vue {
-  public readonly i18n = useI18n();
   public readonly router = useRouter();
   public readonly route = useRoute();
   public readonly commonStore = useCommonStore();
   public readonly searchParams = new SearchParams();
-
+  public readonly i18n = useI18n();
   public readonly t = this.i18n.t;
   public readonly onBeforeMount = onBeforeMount;
   public readonly onMounted = onMounted;
