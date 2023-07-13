@@ -1,1 +1,1 @@
-export type Props = { msg: string };
+export type EvenBusProps = { msg: string };

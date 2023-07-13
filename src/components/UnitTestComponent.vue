@@ -4,11 +4,11 @@
 
 <script setup lang="ts">
 import { BaseComponent, defineClassComponent } from "@/plugins/component.plugin";
-import type { Props } from "./UnitTestComponent";
+import type { UnitTestComponentProps } from "./UnitTestComponent";
 
-const props = defineProps<Props>();
+const props = defineProps<UnitTestComponentProps>();
 
-defineClassComponent(
+const app = defineClassComponent(
   class Component extends BaseComponent {
     public constructor() {
       super();

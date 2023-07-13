@@ -1,1 +1,1 @@
-export type Props = { msg: string };
+export type UnitTestComponentProps = { msg: string };
