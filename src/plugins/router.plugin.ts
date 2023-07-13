@@ -10,7 +10,7 @@ export const pathNotFound: RouteRecordRaw = {
   name: "pathNotFound",
   component: NotFoundView,
   meta: {
-    title: "common.title.notFound",
+    title: "title.notFound",
   },
 };
 
