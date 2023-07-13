@@ -20,16 +20,16 @@ const app = defineClassComponent(
       super();
 
       this.searchParams.onStateChange((params) => {
-        console.log("Hehe from Home", params);
+        console.log("Hello from Home", params);
       });
     }
 
     public onClickA = () => {
-      this.searchParams.changeParams({ a: "thang", b: "" });
+      this.searchParams.changeParams({ a: "param_change", b: "" });
     };
 
     public onClickB = () => {
-      this.searchParams.changeParams({ a: "", b: "thang" });
+      this.searchParams.changeParams({ a: "", b: "param_change" });
     };
 
     public onClickC = () => {

@@ -5,6 +5,6 @@
     "composite": true,
     "ignoreDeprecations": "5.0",
     "lib": [],
-    "types": ["node", "jsdom", "@intlify/unplugin-vue-i18n/messages"]
+    "types": ["node", "jsdom"]
   }
 }

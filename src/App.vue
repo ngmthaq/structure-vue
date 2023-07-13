@@ -7,7 +7,7 @@
 import { RouterView } from "vue-router";
 import { AppConst } from "./const/app.const";
 import { BaseComponent, defineClassComponent } from "./plugins/component.plugin";
-import { GblobalEvent } from "./plugins/event.plugin";
+import { GlobalEvent } from "./plugins/event.plugin";
 import InternalErrorView from "@/views/errors/InternalErrorView.vue";
 
 const app = defineClassComponent(
@@ -24,7 +24,7 @@ const app = defineClassComponent(
         },
       );
 
-      GblobalEvent.on(AppConst.EVENTS.internalError, () => {
+      GlobalEvent.on(AppConst.EVENTS.internalError, () => {
         this.isError.value = true;
       });
 

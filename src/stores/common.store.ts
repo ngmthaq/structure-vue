@@ -16,7 +16,7 @@ export const useCommonStore = defineClassStore(
 
     public eventBus: Ref<EventBus> = this.ref(eventBus);
 
-    public setIsloading = (bool: boolean) => {
+    public setIsLoading = (bool: boolean) => {
       this.isLoading.value = bool;
     };
   },

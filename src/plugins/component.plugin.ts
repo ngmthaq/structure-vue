@@ -4,7 +4,7 @@ import { useI18n } from "vue-i18n";
 import { AppConst } from "@/const/app.const";
 import { useCommonStore } from "@/stores/common.store";
 import { Vue } from "./vue.plugin";
-import { GblobalEvent } from "./event.plugin";
+import { GlobalEvent } from "./event.plugin";
 import { SearchParams } from "./params.plugin";
 
 export abstract class BaseComponent extends Vue {
@@ -23,6 +23,17 @@ export abstract class BaseComponent extends Vue {
   public readonly onUnmounted = onUnmounted;
   public readonly onBeforeRouteLeave = onBeforeRouteLeave;
   public readonly onBeforeRouteUpdate = onBeforeRouteUpdate;
+
+  public constructor() {
+    super();
+    this.router.afterEach((to) => {
+      if (to.meta.title) {
+        document.title = this.t(to.meta.title as any);
+      } else {
+        document.title = "";
+      }
+    });
+  }
 }
 
 export function defineClassComponent<C extends BaseComponent>(component: new () => C): C {
@@ -31,5 +42,5 @@ export function defineClassComponent<C extends BaseComponent>(component: new () 
 
 export function onError(error: any) {
   console.error(error);
-  GblobalEvent.emit(AppConst.EVENTS.internalError, null);
+  GlobalEvent.emit(AppConst.EVENTS.internalError, null);
 }
