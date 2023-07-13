@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory, type RouteRecordRaw } from "vue-router";
-import { translate } from "./i18n.plugin";
 import { PathConst } from "@/const/path.const";
+import { i18n } from "@/plugins/i18n.plugin";
 import NotFoundView from "@/views/errors/NotFoundView.vue";
 
 export const routes = Object.values(PathConst);
@@ -10,7 +10,7 @@ export const pathNotFound: RouteRecordRaw = {
   name: "pathNotFound",
   component: NotFoundView,
   meta: {
-    title: "title.notFound",
+    title: "common.title.notFound",
   },
 };
 
@@ -20,5 +20,5 @@ export const router = createRouter({
 });
 
 router.afterEach((to) => {
-  document.title = to.meta.title && typeof to.meta.title === "string" ? translate(to.meta.title) : "";
+  document.title = to.meta.title && typeof to.meta.title === "string" ? i18n.global.t(to.meta.title) : "";
 });

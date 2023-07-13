@@ -7,7 +7,7 @@ export class PathConst {
     name: "home",
     component: HomeViewVue,
     meta: {
-      title: "title.home",
+      title: "common.title.home",
     },
   };
 }

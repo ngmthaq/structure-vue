@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>500</h1>
-    <p>{{ app.t("title.internalError") }}</p>
+    <p>{{ app.t("common.title.internalError") }}</p>
   </div>
 </template>
 
@@ -12,7 +12,7 @@ const app = defineClassComponent(
   class View extends BaseComponent {
     public constructor() {
       super();
-      document.title = this.t("title.internalError");
+      document.title = this.t("common.title.internalError");
     }
   },
 );

@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>404</h1>
-    <p>{{ app.t("title.notFound") }}</p>
+    <p>{{ app.t("common.title.notFound") }}</p>
   </div>
 </template>
 
