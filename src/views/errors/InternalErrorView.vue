@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="error-container">
     <h1>500</h1>
     <p>{{ app.t("title.internalError") }}</p>
   </div>
@@ -18,4 +18,15 @@ const app = defineClassComponent(
 );
 </script>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+@import "../../assets/scss/modules";
+
+.error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+</style>

@@ -2,7 +2,7 @@
   "hello": "World",
   "title": {
     "home": "Homepage",
-    "notFound": "Not Found",
-    "internalError": "Error"
+    "notFound": "Sorry, the page you are looking for does not exist!",
+    "internalError": "Oops! Something went wrong, please try again later!"
   }
 }

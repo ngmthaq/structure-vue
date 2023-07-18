@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="error-container">
     <h1>404</h1>
     <p>{{ app.t("title.notFound") }}</p>
   </div>
@@ -11,4 +11,15 @@ import { BaseComponent, defineClassComponent } from "@/plugins/component.plugin"
 const app = defineClassComponent(class View extends BaseComponent {});
 </script>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+@import "../../assets/scss/modules";
+
+.error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
