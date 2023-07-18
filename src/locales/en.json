@@ -1,8 +1,12 @@
 {
   "hello": "World",
   "title": {
-    "home": "Homepage",
+    "keycode": "Javascript key code check",
     "notFound": "Sorry, the page you are looking for does not exist!",
     "internalError": "Oops! Something went wrong, please try again later!"
+  },
+  "keycode": {
+    "welcome": "Click any keyboard button to see the event information",
+    "isPreventDefault": "Prevent Default"
   }
 }

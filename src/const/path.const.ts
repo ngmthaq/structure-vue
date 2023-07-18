@@ -1,13 +1,13 @@
 import type { RouteRecordRaw } from "vue-router";
-import HomeViewVue from "@/views/home/HomeView.vue";
+import KeyCodeView from "@/views/keycode/KeyCodeView.vue";
 
 export class PathConst {
   public static home: Route = {
     path: "/",
     name: "home",
-    component: HomeViewVue,
+    component: KeyCodeView,
     meta: {
-      title: "title.home",
+      title: "title.keycode",
     },
   };
 }

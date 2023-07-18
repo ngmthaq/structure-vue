@@ -27,7 +27,7 @@ export abstract class BaseComponent extends Vue {
     super();
     this.router.afterEach((to) => {
       if (to.meta.title) {
-        document.title = this.t(to.meta.title as any);
+        document.title = this.t(to.meta.title as any) + " | ngmthaq";
       } else {
         document.title = "";
       }
