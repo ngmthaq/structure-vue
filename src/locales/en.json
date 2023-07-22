@@ -1,7 +1,7 @@
 {
   "hello": "World",
   "title": {
-    "keycode": "Javascript key code check",
+    "keycode": "Javascript Keycode",
     "notFound": "Sorry, the page you are looking for does not exist!",
     "internalError": "Oops! Something went wrong, please try again later!"
   },
