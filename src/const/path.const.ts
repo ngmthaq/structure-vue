@@ -1,5 +1,6 @@
 import type { RouteRecordRaw } from "vue-router";
 import KeyCodeView from "@/views/keycode/KeyCodeView.vue";
+import CalculatorView from "@/views/calc/CalculatorView.vue";
 
 export class PathConst {
   public static keycode: Route = {
@@ -14,9 +15,9 @@ export class PathConst {
   public static calc: Route = {
     path: "/calc",
     name: "calc",
-    component: KeyCodeView,
+    component: CalculatorView,
     meta: {
-      title: "title.keycode",
+      title: "title.calc",
     },
   };
 }

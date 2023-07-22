@@ -21,6 +21,7 @@ import AppSidebar from "@/components/AppSidebar.vue";
   & #main-viewer {
     height: 100vh;
     overflow-y: scroll;
+    padding: 0 16px;
   }
 }
 </style>

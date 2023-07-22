@@ -4,6 +4,6 @@ export class AppConst {
   };
 
   public static WIDTH = {
-    appSidebar: 300,
+    appSidebar: 240,
   };
 }

@@ -66,7 +66,7 @@
           </div>
         </div>
       </div>
-      <div class="row">
+      <div class="row mt-2">
         <div class="col-12">
           <div class="d-flex align-items-center justify-content-center">
             <input type="checkbox" id="prevent-default" v-model="app.isPreventDefault.value" />
