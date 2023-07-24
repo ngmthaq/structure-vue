@@ -1,6 +1,7 @@
 import type { RouteRecordRaw } from "vue-router";
 import KeyCodeView from "@/views/keycode/KeyCodeView.vue";
 import CalculatorView from "@/views/calc/CalculatorView.vue";
+import BoxShadowView from "@/views/styles/BoxShadowView.vue";
 
 export class PathConst {
   public static keycode: Route = {
@@ -18,6 +19,15 @@ export class PathConst {
     component: CalculatorView,
     meta: {
       title: "title.calc",
+    },
+  };
+
+  public static boxShadow: Route = {
+    path: "/styles/box-shadow",
+    name: "boxShadow",
+    component: BoxShadowView,
+    meta: {
+      title: "title.styles.boxShadow",
     },
   };
 }

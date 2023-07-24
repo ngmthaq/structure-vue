@@ -4,7 +4,7 @@
       <div class="container" style="max-width: 400px">
         <div class="row g-0">
           <div class="col-12">
-            <p class="text-center text">Simple Calculator</p>
+            <p class="text-center text">{{ app.t("calculator.title") }}</p>
           </div>
         </div>
         <div class="row g-0">
@@ -124,7 +124,6 @@ const app = defineClassComponent(
       try {
         this.text.value = eval(this.text.value) + "";
       } catch (error: any) {
-        this.onClear();
         alert(error.message);
       }
     };
