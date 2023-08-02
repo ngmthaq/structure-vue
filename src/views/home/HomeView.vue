@@ -33,7 +33,7 @@ const app = defineClassComponent(
     };
 
     public onClickC = () => {
-      this.commonStore.eventBus.emit("click", { hello: "world" });
+      this.eventBus.emit("click", { hello: "world" });
     };
   },
 );

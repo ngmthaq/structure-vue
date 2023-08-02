@@ -11,6 +11,7 @@ export abstract class BaseComponent extends Vue {
   public readonly router = useRouter();
   public readonly route = useRoute();
   public readonly commonStore = useCommonStore();
+  public readonly eventBus = this.commonStore.eventBus;
   public readonly searchParams = new SearchParams();
   public readonly i18n = useI18n();
   public readonly t = this.i18n.t;

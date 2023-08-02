@@ -13,7 +13,7 @@ const app = defineClassComponent(
     public constructor() {
       super();
 
-      this.commonStore.eventBus.on("click", (data) => {
+      this.eventBus.on("click", (data) => {
         console.log(data);
       });
     }
